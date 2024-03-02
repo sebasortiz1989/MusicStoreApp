@@ -20,5 +20,8 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [D:/Repos/Verion/Treinamento/MusicStoreApp/MusicStoreApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/Repos/Verion/Treinamento/MusicStoreApp/MusicStoreApp/Icons.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/Repos/Verion/Treinamento/MusicStoreApp/MusicStoreApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

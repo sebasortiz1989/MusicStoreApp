@@ -11,5 +11,6 @@
   
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="avares://MusicStoreApp/Icons.axaml" />
     </Application.Styles>
 </Application>

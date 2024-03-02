@@ -1,8 +1,17 @@
-﻿namespace MusicStoreApp.ViewModels;
+﻿using System.Windows.Input;
+using ReactiveUI;
+
+namespace MusicStoreApp.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
-#pragma warning disable CA1822 // Mark members as static
-    public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
+    public ICommand BuyMusicCommand { get; }
+
+    public MainWindowViewModel()
+    {
+        BuyMusicCommand = ReactiveCommand.Create(() =>
+        {
+            // Code here will be executed when the button is clicked.
+        });
+    }
 }

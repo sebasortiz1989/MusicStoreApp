@@ -2,16 +2,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MusicStoreApp.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MusicStoreApp.Views.MusicStoreView">
+             x:Class="MusicStoreApp.Views.MusicStoreView"
+             x:DataType="viewModels:MusicStoreViewModel">
+
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
-            <TextBox Watermark="Search for Albums...." />
-            <ProgressBar IsIndeterminate="True"  />
+            <TextBox Text="{Binding SearchText}" Watermark="Search for Albums...." />
+            <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
         </StackPanel>
         <Button Content="Buy Album" 
                 DockPanel.Dock="Bottom" 
                 HorizontalAlignment="Center" />
-        <ListBox/>
+        <ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
     </DockPanel>
+
 </UserControl>

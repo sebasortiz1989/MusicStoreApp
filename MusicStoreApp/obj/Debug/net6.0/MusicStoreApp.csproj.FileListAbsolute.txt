@@ -134,3 +134,4 @@ D:\Repos\Verion\Treinamento\MusicStoreApp\MusicStoreApp\obj\Debug\net6.0\MusicSt
 D:\Repos\Verion\Treinamento\MusicStoreApp\MusicStoreApp\obj\Debug\net6.0\MusicSto.0B22836D.Up2Date
 D:\Repos\Verion\Treinamento\MusicStoreApp\MusicStoreApp\obj\Debug\net6.0\MusicStoreApp.genruntimeconfig.cache
 D:\Repos\Verion\Treinamento\MusicStoreApp\MusicStoreApp\obj\Debug\net6.0\ref\MusicStoreApp.dll
+D:\Repos\Verion\Treinamento\MusicStoreApp\MusicStoreApp\obj\Debug\net6.0\MusicStoreApp.sourcelink.json

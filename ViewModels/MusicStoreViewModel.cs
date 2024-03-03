@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Reactive.Linq;
+using System.Threading;
 using MusicStoreApp.Models;
 using ReactiveUI;
 
@@ -11,11 +13,12 @@ public class MusicStoreViewModel : ViewModelBase
     private string? _searchText;
     private bool _isBusy;
     private AlbumViewModel? _selectedAlbum;
+    private CancellationTokenSource? _cancellationTokenSource;
 
     public MusicStoreViewModel()
     {
         this.WhenAnyValue(x => x.SearchText)
-            .Throttle(TimeSpan.FromMilliseconds(400))
+            .Throttle(TimeSpan.FromMilliseconds(500))
             .ObserveOn(RxApp.MainThreadScheduler)
             .Subscribe(DoSearch!);
     }
@@ -45,6 +48,10 @@ public class MusicStoreViewModel : ViewModelBase
         IsBusy = true;
         SearchResults.Clear();
 
+        _cancellationTokenSource?.Cancel();
+        _cancellationTokenSource = new CancellationTokenSource();
+        var cancellationToken = _cancellationTokenSource.Token;
+
         if (!string.IsNullOrWhiteSpace(s))
         {
             var albums = await Album.SearchAsync(s);
@@ -52,10 +59,29 @@ public class MusicStoreViewModel : ViewModelBase
             foreach (var album in albums)
             {
                 var vm = new AlbumViewModel(album);
+
                 SearchResults.Add(vm);
+            }
+
+            if (!cancellationToken.IsCancellationRequested)
+            {
+                LoadCovers(cancellationToken);
             }
         }
 
         IsBusy = false;
+    }
+
+    private async void LoadCovers(CancellationToken cancellationToken)
+    {
+        foreach (var album in SearchResults.ToList())
+        {
+            await album.LoadCover();
+
+            if (cancellationToken.IsCancellationRequested)
+            {
+                return;
+            }
+        }
     }
 }

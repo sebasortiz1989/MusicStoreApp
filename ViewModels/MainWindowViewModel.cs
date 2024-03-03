@@ -1,6 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Windows.Input;
+using MusicStoreApp.Models;
 using ReactiveUI;
 
 namespace MusicStoreApp.ViewModels;
@@ -23,9 +26,26 @@ public class MainWindowViewModel : ViewModelBase
                 await result.SaveToDiskAsync();
             }
         });
+
+        RxApp.MainThreadScheduler.Schedule(LoadAlbums);
     }
     
     public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 
     public ObservableCollection<AlbumViewModel> Albums { get; } = new();
+
+    private async void LoadAlbums()
+    {
+        var albums = (await Album.LoadCachedAsync()).Select(x => new AlbumViewModel(x));
+
+        foreach (var album in albums)
+        {
+            Albums.Add(album);
+        }
+
+        foreach (var album in Albums.ToList())
+        {
+            await album.LoadCover();
+        }
+    }
 }

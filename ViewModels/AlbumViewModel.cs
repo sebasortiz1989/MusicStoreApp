@@ -1,6 +1,6 @@
 ﻿namespace MusicStoreApp.ViewModels;
 
-public class AlbumViewModel
+public class AlbumViewModel : ViewModelBase
 {
     
 }

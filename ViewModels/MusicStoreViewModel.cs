@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading;
 using MusicStoreApp.Models;
@@ -21,10 +22,14 @@ public class MusicStoreViewModel : ViewModelBase
             .Throttle(TimeSpan.FromMilliseconds(500))
             .ObserveOn(RxApp.MainThreadScheduler)
             .Subscribe(DoSearch!);
+        
+        BuyMusicCommand = ReactiveCommand.Create(() => SelectedAlbum);
     }
 
     public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
 
+    public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
+    
     public AlbumViewModel? SelectedAlbum
     {
         get => _selectedAlbum;

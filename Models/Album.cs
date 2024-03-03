@@ -13,10 +13,6 @@ public class Album
     private static HttpClient s_httpClient = new();
     private string CachePath => $"./Cache/{Artist} - {Title}";
 
-    public string Artist { get; set; }
-    public string Title { get; set; }
-    public string CoverUrl { get; set; }
-
     public Album(string artist, string title, string coverUrl)
     {
         Artist = artist;
@@ -24,13 +20,17 @@ public class Album
         CoverUrl = coverUrl;
     }
 
+    public string Artist { get; set; }
+    public string Title { get; set; }
+    public string CoverUrl { get; set; }
+
     public static async Task<IEnumerable<Album>> SearchAsync(string searchTerm)
     {
         var query = await s_SearchManager.GetAlbumsAsync(searchTerm)
             .ConfigureAwait(false);
-                
+
         return query.Albums.Select(x =>
-            new Album(x.ArtistName, x.CollectionName, 
+            new Album(x.ArtistName, x.CollectionName,
                 x.ArtworkUrl100.Replace("100x100bb", "600x600bb")));
     }
 

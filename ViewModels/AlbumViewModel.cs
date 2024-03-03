@@ -1,8 +1,7 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using Avalonia.Media.Imaging;
+﻿using Avalonia.Media.Imaging;
 using MusicStoreApp.Models;
 using ReactiveUI;
+using System.Threading.Tasks;
 
 namespace MusicStoreApp.ViewModels;
 
@@ -28,12 +27,16 @@ public class AlbumViewModel : ViewModelBase
 
     public async Task LoadCover()
     {
-        var imageStream = await _album.LoadCoverBitmapAsync();
-        StreamReader sr = new StreamReader(imageStream);
-        
-        if (imageStream is { CanRead: true, CanWrite: true })
+        // var imageStream = await _album.LoadCoverBitmapAsync();
+        // StreamReader sr = new StreamReader(imageStream);
+        //
+        // if (imageStream is { CanRead: true, CanWrite: true })
+        // {
+        //     Cover = await Task.Run(() => Bitmap.DecodeToWidth(sr.BaseStream, 400));
+        // }
+        await using (var imageStream = await _album.LoadCoverBitmapAsync())
         {
-            Cover = await Task.Run(() => Bitmap.DecodeToWidth(sr.BaseStream, 400));
+            Cover = await Task.Run(() => Bitmap.DecodeToWidth(imageStream, 400));
         }
     }
 }

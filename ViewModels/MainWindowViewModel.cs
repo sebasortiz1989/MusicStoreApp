@@ -12,9 +12,12 @@ public class MainWindowViewModel : ViewModelBase
 {
     public ICommand BuyMusicCommand { get; }
 
+    public ICommand OpenTestWindow { get; }
+
     public MainWindowViewModel()
     {
         ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
+        ShowTest = new Interaction<TelaTrcControleViewModel, int>();
 
         BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
         {
@@ -27,10 +30,19 @@ public class MainWindowViewModel : ViewModelBase
             }
         });
 
+        OpenTestWindow = ReactiveCommand.CreateFromTask(async () =>
+        {
+            var test = new TelaTrcControleViewModel();
+            var result = await ShowTest.Handle(test);
+        });
+
+
         RxApp.MainThreadScheduler.Schedule(LoadAlbums);
     }
     
     public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
+
+    public Interaction<TelaTrcControleViewModel, int> ShowTest { get; }
 
     public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 

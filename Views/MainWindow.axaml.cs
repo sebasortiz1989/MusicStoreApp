@@ -12,7 +12,10 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         InitializeComponent();
         this.WhenActivated(action =>
-            action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+        {
+            action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync));
+            action(ViewModel!.ShowTest.RegisterHandler(DoShowTestAsync));
+        });
     }
 
     private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, 
@@ -22,6 +25,15 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
         dialog.DataContext = interaction.Input;
 
         var result = await dialog.ShowDialog<AlbumViewModel?>(this);
+        interaction.SetOutput(result);
+    }
+
+    private async Task DoShowTestAsync(InteractionContext<TelaTrcControleViewModel, int> interaction)
+    {
+        var dialog = new TelaTrcControle();
+        dialog.DataContext = interaction.Input;
+
+        var result = await dialog.ShowDialog<int>(this);
         interaction.SetOutput(result);
     }
 }

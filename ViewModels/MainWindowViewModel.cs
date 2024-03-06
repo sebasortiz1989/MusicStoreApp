@@ -4,6 +4,7 @@ using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Windows.Input;
 using MusicStoreApp.Models;
+using MusicStoreApp.ViewModels.Embarcado;
 using ReactiveUI;
 
 namespace MusicStoreApp.ViewModels;
@@ -17,7 +18,7 @@ public class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel()
     {
         ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
-        ShowTest = new Interaction<TelaTrcControleViewModel, int>();
+        ShowTest = new Interaction<ModeloApresentacaoSensorProfundidade, int>();
 
         BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
         {
@@ -32,7 +33,7 @@ public class MainWindowViewModel : ViewModelBase
 
         OpenTestWindow = ReactiveCommand.CreateFromTask(async () =>
         {
-            var test = new TelaTrcControleViewModel();
+            var test = new ModeloApresentacaoSensorProfundidade();
             var result = await ShowTest.Handle(test);
         });
 
@@ -42,7 +43,7 @@ public class MainWindowViewModel : ViewModelBase
     
     public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 
-    public Interaction<TelaTrcControleViewModel, int> ShowTest { get; }
+    public Interaction<ModeloApresentacaoSensorProfundidade, int> ShowTest { get; }
 
     public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 

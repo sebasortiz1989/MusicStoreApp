@@ -28,4 +28,12 @@
         <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.9" />
         <PackageReference Include="iTunesSearch" Version="1.0.44" />
     </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Views\Embarcado\TelaTrcControle.axaml.cs">
+        <DependentUpon>TelaTrcControle.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

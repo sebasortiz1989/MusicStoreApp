@@ -3,11 +3,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:MusicStoreApp.ViewModels"
+             xmlns:embarcado="clr-namespace:MusicStoreApp.ViewModels.Embarcado"
              mc:Ignorable="d" 
              d:DesignHeight="800"
              d:DesignWidth="1280"
-             x:Class="MusicStoreApp.Views.TelaTrcControle"
-             x:DataType="viewModels:TelaTrcControleViewModel">
+             x:Class="MusicStoreApp.Views.Embarcado.TelaTrcControle"
+             x:DataType="embarcado:TelaTrcControleViewModel">
 
     <Viewbox VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <DockPanel Background="Black">

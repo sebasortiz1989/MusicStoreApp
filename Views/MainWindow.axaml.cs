@@ -29,9 +29,9 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
         interaction.SetOutput(result);
     }
 
-    private async Task DoShowTestAsync(InteractionContext<ModeloApresentacaoSensorProfundidade, int> interaction)
+    private async Task DoShowTestAsync(InteractionContext<ModeloApresentacaoConfiguracaoSensorProfundidade, int> interaction)
     {
-        var dialog = new Embarcado.TelaSensorProfundidade();
+        var dialog = new Embarcado.TelaConfiguracaoSensorProfundidade();
         dialog.DataContext = interaction.Input;
 
         var result = await dialog.ShowDialog<int>(this);

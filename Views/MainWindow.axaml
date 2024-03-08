@@ -33,13 +33,51 @@
         
         <Panel Margin="40">
             <StackPanel>
-                <Button HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding BuyMusicCommand}">
+                <Button HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding BuyMusicCommand}">
                     <PathIcon Data="{StaticResource StoreMicrosoftRegular}" />
                 </Button>
-            
-                <Button HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                    TestButton
-                </Button>
+                
+                <WrapPanel>
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                    
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
+                        <TextBlock Text="Test Button 1"/>
+                    </Button>
+                </WrapPanel>
             </StackPanel>
             
             <ItemsControl Margin="0 40 0 0" ItemsSource="{Binding Albums}">

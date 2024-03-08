@@ -18,7 +18,7 @@ public class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel()
     {
         ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
-        ShowTest = new Interaction<ModeloApresentacaoSensorProfundidade, int>();
+        ShowTest = new Interaction<ModeloApresentacaoConfiguracaoSensorProfundidade, int>();
 
         BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
         {
@@ -33,7 +33,7 @@ public class MainWindowViewModel : ViewModelBase
 
         OpenTestWindow = ReactiveCommand.CreateFromTask(async () =>
         {
-            var test = new ModeloApresentacaoSensorProfundidade();
+            var test = new ModeloApresentacaoConfiguracaoSensorProfundidade();
             var result = await ShowTest.Handle(test);
         });
 
@@ -43,7 +43,7 @@ public class MainWindowViewModel : ViewModelBase
     
     public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 
-    public Interaction<ModeloApresentacaoSensorProfundidade, int> ShowTest { get; }
+    public Interaction<ModeloApresentacaoConfiguracaoSensorProfundidade, int> ShowTest { get; }
 
     public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 

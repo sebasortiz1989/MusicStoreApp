@@ -35,5 +35,9 @@
         <DependentUpon>TelaTrcControle.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Views\Embarcado\ModuloPosicao\TelaIrrigadorDeMuda.axaml.cs">
+        <DependentUpon>TelaIrrigadorDeMuda.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

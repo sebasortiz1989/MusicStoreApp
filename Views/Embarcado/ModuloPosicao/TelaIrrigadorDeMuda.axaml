@@ -8,5 +8,230 @@
              d:DesignWidth="1280"
              x:DataType="moduloPosicao:ModeloApresentacaoIrrigadorDeMuda"
              x:Class="MusicStoreApp.Views.Embarcado.ModuloPosicao.TelaIrrigadorDeMuda">
-    Welcome to Avalonia!
+
+       <Viewbox>
+        <StackPanel Background="LightGray" Height="800" Width="1280">
+            <!-- Replace HeaderDockpanel -->
+            <Border VerticalAlignment="Top" Background="White" Height="80" Width="1280" BorderThickness="0, 0, 0, 1" BorderBrush="Black">
+                <Panel >
+                    <Button x:Name="ReturnButton" Background="DarkGray" Width="80" Margin="10, 0,0 0" CornerRadius="5">
+                        <Button.Styles>
+                            <Style Selector="Button">
+                                <Setter Property="Background" Value="Transparent" />
+                            </Style>
+                            <Style Selector="Button:pointer /template/ ContentPresenter">
+                                <Setter Property="Background" Value="DarkGray" />
+                            </Style>
+                            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="LightGray" />
+                            </Style>
+                            <Style Selector="Button:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="DarkOrange" />
+                            </Style>
+                        </Button.Styles>
+                        <Button.Content>
+                            <StackPanel>
+                                <TextBlock FontSize="18" Foreground="Black" Text="Return" HorizontalAlignment="Center"/>
+                                <Image Source="{SvgImage /Assets/leftArrow.svg}" Height="25" Width="25"></Image>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <TextBlock FontSize="22" Text="Irrigador de Muda" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                </Panel> 
+            </Border>
+            <!-- Replace HeaderDockpanel -->
+            
+            <Grid Height="720" ColumnDefinitions="0.75*, 0.25*" RowDefinitions="260, 260, 100, 100">
+                <Border Grid.Row="0" Grid.Column="0" CornerRadius="10" Margin="15" Background="White">
+                    <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="*, *, *, *, *" Margin="15">
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Status Geral" Foreground="Black" FontSize="22" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,0,1" Grid.RowSpan="2">
+                            <TextBlock Margin="5,0,0,0" Text="Data" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1, 0, 0,1" Grid.RowSpan="2" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="1/1/2020 12:00:00 AM" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        
+                        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1,1,0,1">
+                            <TextBlock Margin="5,0,0,0" Text="Está Habilidado?" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="1, 0, 0,1" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="Não" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,1">
+                            <TextBlock Margin="5,0,0,0" Text="Velocidade" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="4" Grid.Column="1" BorderBrush="Black" BorderThickness="1, 0, 0,1" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="0.00 Km/h" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1,1,0,1">
+                            <TextBlock Margin="5,0,0,0" Text="Posição Inicial Latitude" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="2" BorderBrush="Black" BorderThickness="1, 0, 0,1" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="0 N" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="2" BorderBrush="Black" BorderThickness="1,0,0,1">
+                            <TextBlock Margin="5,0,0,0" Text="Posição Inicial Longitude" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="4" Grid.Column="2" BorderBrush="Black" BorderThickness="1, 0, 0,1" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="0 E" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="3" BorderBrush="Black" BorderThickness="1,1,1,1">
+                            <TextBlock Margin="5,0,0,0" Text="Posição Final Latitude" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="3" BorderBrush="Black" BorderThickness="1, 0, 1,1" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="0 N" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="3" BorderBrush="Black" BorderThickness="1,0,1,1">
+                            <TextBlock Margin="5,0,0,0" Text="Posição Final Longitude" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Row="4" Grid.Column="3" BorderBrush="Black" BorderThickness="1, 0, 1,1" Background="LightGray">
+                            <TextBlock Margin="5,0,0,0" Text="0 E" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </Border>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0" CornerRadius="10" Margin="15" Background="White">
+                    <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="*, *, *, *, *" Margin="15">
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Status Configuração" Foreground="Black" FontSize="22" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,0,1">
+                        <TextBlock Margin="5,0,0,0" Text="Tempo de Acionamento" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1, 0, 0,1" Background="LightGray">
+                        <TextBlock Margin="5,0,0,0" Text="0.00 ms" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,0,1">
+                        <TextBlock Margin="5,0,0,0" Text="Numero de Válvulas" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="0" BorderBrush="Black" BorderThickness="1, 0, 0,1" Background="LightGray">
+                        <TextBlock Margin="5,0,0,0" Text="0" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    
+                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1,1,1,1">
+                        <TextBlock Margin="5,0,0,0" Text="Distancia GPS-Valvula X" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="1, 0, 1,1" Background="LightGray">
+                        <TextBlock Margin="5,0,0,0" Text="0.00 m" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,1,1">
+                        <TextBlock Margin="5,0,0,0" Text="Tempo de Inercia" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="1" BorderBrush="Black" BorderThickness="1, 0, 1,1" Background="LightGray">
+                        <TextBlock Margin="5,0,0,0" Text="0.00 ms" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="0,1,0,1">
+                        <TextBlock Margin="5,0,0,0" Text="Distancia GPS-Valvula X" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2" BorderBrush="Black" BorderThickness="0, 0, 0,1" Background="LightGray">
+                        <TextBlock Margin="5,0,0,0" Text="0.00 m" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="3" BorderBrush="Black" BorderThickness="1,1,1,1">
+                        <TextBlock Margin="5,0,0,0" Text="Distancia entre Válvulas" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="3" BorderBrush="Black" BorderThickness="1, 0, 1,1" Background="LightGray">
+                        <TextBlock Margin="5,0,0,0" Text="0.00 m" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </Border>
+
+                </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" CornerRadius="10" Margin="15" Background="White">
+                    <Grid Margin="10" RowDefinitions="*, *, *, 10*" ColumnDefinitions="*, *">
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,0,0,0" Text="Status Comando" Foreground="Black" FontSize="22" VerticalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold"/>
+                        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="1">
+                            <TextBlock Margin="5,0,0,0" Text="Lista Posições Mudas" Foreground="Black" FontSize="18" VerticalAlignment="Center" TextWrapping="Wrap"/> 
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0" Background="Black">
+                            <TextBlock Margin="5,0,0,0" Text="Latitude" Foreground="White" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/> 
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="1" Background="Black">
+                            <TextBlock Margin="5,0,0,0" Text="Longitude" Foreground="White" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/> 
+                        </Border>
+                        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="1"/>
+                        <ListBox Grid.Row="3" Grid.Column="0" Height="360" Background="Transparent" BorderBrush="Black"/>
+                        <ListBox Grid.Row="3" Grid.Column="1" Height="360" Background="Transparent" BorderBrush="Black"/>
+                    </Grid>
+                </Border>
+                
+                <Button Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Height="50" Width="400" Background="Orange" CornerRadius="10" HorizontalAlignment="Center">
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                        </Style>
+                        <Style Selector="Button:pointer /template/ ContentPresenter">
+                            <Setter Property="Background" Value="Orange" />
+                        </Style>
+                        <Style Selector="Button:pointerover /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkOrange" />
+                        </Style>
+                        <Style Selector="Button:pressed /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkGray" />
+                        </Style>
+                    </Button.Styles>
+                    <Button.Content>
+                        <TextBlock FontSize="22" Foreground="White" Margin="5,0,0,0" Text="Alterar Configuração" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Height="50" Width="280" Background="Orange" CornerRadius="10" HorizontalAlignment="Center">
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                        </Style>
+                        <Style Selector="Button:pointer /template/ ContentPresenter">
+                            <Setter Property="Background" Value="Orange" />
+                        </Style>
+                        <Style Selector="Button:pointerover /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkOrange" />
+                        </Style>
+                        <Style Selector="Button:pressed /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkGray" />
+                        </Style>
+                    </Button.Styles>
+                    <Button.Content>
+                        <TextBlock FontSize="22" Foreground="White" Margin="5,0,0,0" Text="Alterar Comando" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Height="50" Width="200" Background="Orange" CornerRadius="10" HorizontalAlignment="Center">
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                        </Style>
+                        <Style Selector="Button:pointer /template/ ContentPresenter">
+                            <Setter Property="Background" Value="Orange" />
+                        </Style>
+                        <Style Selector="Button:pointerover /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkOrange" />
+                        </Style>
+                        <Style Selector="Button:pressed /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkGray" />
+                        </Style>
+                    </Button.Styles>
+                    <Button.Content>
+                        <TextBlock FontSize="22" Foreground="White" Margin="5,0,0,0" Text="Obter" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+               
+                <Border Grid.Row="3" Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontWeight="Bold" Margin="40,0,0,0" Foreground="Black" FontSize="22" VerticalAlignment="Center" TextWrapping="Wrap">
+                            <Run Text="ID Microcontrolador:    "/>
+                            <Run Text="0"/>
+                        </TextBlock>
+                        <TextBlock FontWeight="Bold" Margin="120,0,0,0" Foreground="Black" FontSize="22" VerticalAlignment="Center" TextWrapping="Wrap">
+                            <Run Text="ID Componente:    "/>
+                            <Run Text="0"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+            
+
+            
+        </StackPanel>
+    </Viewbox>
+    
 </UserControl>

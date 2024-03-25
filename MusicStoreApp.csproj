@@ -39,5 +39,9 @@
         <DependentUpon>TelaIrrigadorDeMuda.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Views\Controlador\ControladorTesteView.axaml.cs">
+        <DependentUpon>ControladorTesteView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

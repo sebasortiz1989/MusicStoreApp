@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MusicStoreApp.Models;
 using MusicStoreApp.ViewModels.Embarcado;
@@ -40,7 +42,7 @@ public class MainWindowViewModel : ViewModelBase
 
         RxApp.MainThreadScheduler.Schedule(LoadAlbums);
     }
-    
+
     public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 
     public Interaction<ModeloApresentacaoConfiguracaoSensorProfundidade, int> ShowTest { get; }

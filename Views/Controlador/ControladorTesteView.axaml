@@ -1,0 +1,786 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
+             x:Class="MusicStoreApp.Views.Controlador.ControladorTesteView">
+
+	<Viewbox>
+		<Grid RowDefinitions="720" ColumnDefinitions="290,990" >
+			<Border Background="LightCyan">
+				<StackPanel VerticalAlignment="Stretch">
+					
+					<!--  Primeira Linha de Botões  -->
+					<Grid 
+						RowDefinitions="5,40,5,40,5,50"
+						ColumnDefinitions="5,90,5,90,5,90,5">
+						<Button 
+							Grid.Row="1" 
+							Grid.Column="1"
+							Grid.ColumnSpan="3"
+							Height="40" 
+							Background="#D9D9D9"
+							Margin="0"
+							VerticalAlignment="Center" 
+							HorizontalAlignment="Stretch"
+							BorderBrush="Black"
+							CornerRadius="8" >
+							<TextBlock 
+								Text="Inicializar Controlador" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+						<Button
+							Grid.Row="3" 
+							Grid.Column="1"
+							Grid.ColumnSpan="3"
+							Height="40" 
+							Background="#D9D9D9"
+							Margin="0"
+							BorderBrush="Black"
+							VerticalAlignment="Center" 
+							HorizontalAlignment="Stretch"
+							CornerRadius="8" >
+							<TextBlock 
+								Text="Finalizar Controlador" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+						<Button
+							Grid.Row="5"
+							Grid.Column="1"
+							FontSize="10" 
+							BorderBrush="Black"
+							VerticalContentAlignment="Stretch"
+							HorizontalContentAlignment="Stretch"
+							VerticalAlignment="Stretch"
+							HorizontalAlignment="Stretch"
+							Background="#D9D9D9" 
+							CornerRadius="8">
+							<TextBlock 
+								Text="Manobra Esquerda" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+						
+						<Button
+							Grid.Row="5"
+							Grid.Column="3"
+							FontSize="10" 
+							BorderBrush="Black"
+							VerticalContentAlignment="Stretch"
+							HorizontalContentAlignment="Stretch"
+							VerticalAlignment="Stretch"
+							HorizontalAlignment="Stretch"
+							Background="#D9D9D9" 
+							CornerRadius="8">
+							<TextBlock 
+								Text="Manobra Direita" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+
+						<Button
+							Grid.Row="1"
+							Grid.Column="5"
+							Width="90"
+							Height="40"
+							BorderBrush="Black"
+							VerticalContentAlignment="Center"
+							HorizontalContentAlignment="Center"
+							Background="#D9D9D9"
+							CornerRadius="8" >
+							<TextBlock 
+								Text="Zoom in" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+						<Button 
+							Grid.Row="3"
+							Grid.Column="5" 
+							FontSize="10" 
+							BorderBrush="Black"
+							VerticalContentAlignment="Center"
+							HorizontalContentAlignment="Stretch"
+							Width="90" 
+							Height="40" 
+							Background="#D9D9D9"
+							CornerRadius="8">
+							<TextBlock 
+								Text="Zoom out" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+						<Button
+							Grid.Row="5"
+							Grid.Column="5"
+							FontSize="10" 
+							BorderBrush="Black"
+							VerticalContentAlignment="Stretch"
+							HorizontalContentAlignment="Stretch"
+							VerticalAlignment="Stretch"
+							HorizontalAlignment="Stretch"
+							Background="#D9D9D9" 
+							CornerRadius="8">
+							<TextBlock 
+								Text="Vista Aerea" 
+								FontSize="11"
+								TextAlignment="Center"
+								TextWrapping="WrapWithOverflow"
+								Foreground="Black"
+								Background="Transparent"
+								FontWeight="Bold"
+								VerticalAlignment="Center" 
+								HorizontalAlignment="Stretch" />
+						</Button>
+					</Grid>
+					
+					<!--  Tabelas Latitude e Longitude  -->
+					<!--  Latitute  -->
+					<Grid
+						Grid.Row="1"
+						RowDefinitions="15,55"
+						ColumnDefinitions="15,120,20,120,15">
+						<Grid
+							Grid.Row="1"
+							Grid.Column="1" 
+							ColumnDefinitions="120"
+							RowDefinitions="20.91,35.1">
+							<Border 
+								BorderBrush="Black"
+								BorderThickness="1,1,1,0" 
+								Background="#EFEFEF" >
+								<TextBlock 
+									Text="Latitude" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Border>
+							<Border
+								Grid.Row="1"
+								BorderBrush="Black"
+								BorderThickness="1,1,1,1" 
+								Background="White">
+								<Label />
+							</Border>
+						</Grid>
+					<!--  Longitude  -->
+						<Grid
+							Grid.Row="1" 
+							Grid.Column="3"
+							ColumnDefinitions="120" 
+							RowDefinitions="20.91,35.1">
+							<Border 
+								BorderBrush="Black"
+								BorderThickness="1,1,1,0" 
+								Background="#EFEFEF" >
+								<TextBlock 
+									Text="Longitude" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Border>
+							<Border
+								Grid.Row="1"
+								BorderBrush="Black"
+								BorderThickness="1,1,1,1"
+								Background="White">
+								<Label />
+							</Border>
+						</Grid>
+					</Grid>
+
+					<!--  Sliders e Radio Boxes  -->
+					<Border Margin="5, 10, 5, 10" CornerRadius="10" Background="LightGray">
+						<StackPanel>
+							<Slider
+								Width="265" 
+								Height="40"
+								Background="White" />
+							<Slider 
+								Width="265"
+								Height="45"
+								Background="White"
+								Margin="0, 0, 0, 5"/>
+						</StackPanel>
+					</Border>
+					
+					<Grid Margin="0, 0, 0,10" ColumnDefinitions="5,90,5,85,5">
+						<!--  Radio Boxes Linha 1  -->
+						<Border Background="LightGray" Grid.Column="1" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+							<Grid>
+								<TextBlock
+									ZIndex="1"
+									Text="Navigation Mode" 
+									FontSize="11"
+									TextAlignment="Left"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Top" 
+									HorizontalAlignment="Left" />
+									
+								<ToggleSwitch Margin="5, 30, 0, 0" Background="Transparent" Foreground="Black" ZIndex="0" HorizontalAlignment="Left">
+									<ToggleSwitch.OnContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OnContent>
+									<ToggleSwitch.OffContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OffContent>
+								</ToggleSwitch>	
+							</Grid>
+						</Border>
+
+						<Border Background="LightGray" Grid.Column="3" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+							<Grid>
+								<TextBlock
+									ZIndex="1"
+									Text="Perspective Mode" 
+									FontSize="11"
+									TextAlignment="Left"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Top" 
+									HorizontalAlignment="Left" />
+									
+								<ToggleSwitch Margin="5, 30, 0, 0" Background="Transparent" Foreground="Black" ZIndex="0" HorizontalAlignment="Left">
+									<ToggleSwitch.OnContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OnContent>
+									<ToggleSwitch.OffContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OffContent>
+								</ToggleSwitch>	
+							</Grid>
+						</Border>
+						</Grid>
+					
+					<!--  Segunda Linha de Botões  -->
+					<Grid Height="315" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RowDefinitions="*, *, *, *, *, *, *">
+						<Grid Margin="0, 5, 0, 0" Grid.Row="0" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="1" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="2" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="2" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="3" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="4" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="5" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+						<Grid Margin="0, 5, 0, 0" Grid.Row="6" ColumnDefinitions="5,90,5,90,5,90,5">
+							<Button
+								Grid.Column="1" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Center" />
+							</Button>
+							
+							<Button
+								Grid.Column="3" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+
+							<Button
+								Grid.Column="5" 
+								FontSize="10" 
+								BorderBrush="Black"
+								Background="#D9D9D9"
+								HorizontalAlignment="Stretch"
+								CornerRadius="8">
+								<TextBlock 
+									Text="Test" 
+									FontSize="11"
+									TextAlignment="Center"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Center" 
+									HorizontalAlignment="Stretch" />
+							</Button>
+						</Grid>
+					</Grid>
+				</StackPanel>
+			</Border>
+
+			<!--  Content Mapa  -->
+			<Border Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="1, 0, 0, 0">
+				<Grid />
+			</Border>
+			
+		</Grid>
+	</Viewbox>
+    
+    
+</UserControl>

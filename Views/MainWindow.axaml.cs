@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.ReactiveUI;
 using MusicStoreApp.ViewModels;
+using MusicStoreApp.ViewModels.Embarcado;
 using ReactiveUI;
 
 namespace MusicStoreApp.Views;
@@ -28,9 +29,9 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
         interaction.SetOutput(result);
     }
 
-    private async Task DoShowTestAsync(InteractionContext<TelaTrcControleViewModel, int> interaction)
+    private async Task DoShowTestAsync(InteractionContext<ModeloApresentacaoConfiguracaoSensorProfundidade, int> interaction)
     {
-        var dialog = new TelaTrcControle();
+        var dialog = new Embarcado.TelaConfiguracaoSensorProfundidade();
         dialog.DataContext = interaction.Input;
 
         var result = await dialog.ShowDialog<int>(this);

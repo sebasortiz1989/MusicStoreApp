@@ -1,0 +1,129 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:moduloPosicao="clr-namespace:MusicStoreApp.ViewModels.Embarcado.ModuloPosicao"
+             mc:Ignorable="d"
+             d:DesignHeight="800"
+             d:DesignWidth="1280"
+             x:DataType="moduloPosicao:ModeloApresentacaoConfigurarIrrigadorDeMuda"
+             x:Class="MusicStoreApp.Views.Embarcado.ModuloPosicao.TelaConfigurarIrrigadorDeMuda">
+
+    <Viewbox>
+        <StackPanel Background="LightGray" Height="800" Width="1280">
+            <!-- Replace HeaderDockpanel -->
+            <Border VerticalAlignment="Top" Background="White" Height="80" Width="1280" BorderThickness="0, 0, 0, 1" BorderBrush="Black">
+                <Panel >
+                    <Button x:Name="ReturnButton" Background="DarkGray" Width="80" Margin="10, 0,0 0" CornerRadius="5">
+                        <Button.Styles>
+                            <Style Selector="Button">
+                                <Setter Property="Background" Value="Transparent" />
+                            </Style>
+                            <Style Selector="Button:pointer /template/ ContentPresenter">
+                                <Setter Property="Background" Value="DarkGray" />
+                            </Style>
+                            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="LightGray" />
+                            </Style>
+                            <Style Selector="Button:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="DarkOrange" />
+                            </Style>
+                        </Button.Styles>
+                        <Button.Content>
+                            <StackPanel>
+                                <TextBlock FontSize="18" Foreground="Black" Text="Return" HorizontalAlignment="Center"/>
+                                <Image Source="{SvgImage /Assets/leftArrow.svg}" Height="25" Width="25"></Image>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <TextBlock FontSize="22" Text="Configurar Irrigador de Muda" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                </Panel> 
+            </Border>
+            <!-- Replace HeaderDockpanel -->
+            
+            <Grid ColumnDefinitions="*, *" RowDefinitions="50, 300" Margin="20, 100, 20, 80">
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="Black" CornerRadius="10, 10, 0, 0">
+                    <TextBlock Foreground="White" FontWeight="Bold" FontSize="22" Text="Parâmetro de configuração de Irrigação de Muda" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                
+                <Border Grid.Row="1" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Background="White" CornerRadius="0, 0, 0, 10">
+                    <Grid RowDefinitions="*, *, *" ColumnDefinitions="0.7*, 0.3*">
+                        <TextBlock Margin="10, 0, 0, 0" Grid.Row="0" Grid.Column="0" Foreground="Black" VerticalAlignment="Center" FontSize="18">
+                            <Run Text="Tempo de Acionamento"/>
+                            <Run Text=":"/>
+                        </TextBlock>
+                        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Margin="20" CornerRadius="10">
+                            <TextBlock FontWeight="Bold" Text="0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Border>
+
+                        <TextBlock Margin="10, 0, 0, 0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Foreground="Black" VerticalAlignment="Center" FontSize="18">
+                            <Run Text="Distancia entre GPS e primeira válvula esquerda Eixo X"/>
+                            <Run Text=":"/>
+                        </TextBlock>
+                        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Margin="20" CornerRadius="10">
+                            <TextBlock FontWeight="Bold" Text="0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Border>
+
+                        <TextBlock Margin="10, 0, 0, 0" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Foreground="Black" VerticalAlignment="Center" FontSize="18">
+                            <Run Text="Distancia entre GPS e primeira válvula esquerda Eixo Y"/>
+                            <Run Text=":"/>
+                        </TextBlock>
+                        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1" Margin="20" CornerRadius="10">
+                            <TextBlock FontWeight="Bold" Text="0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Border>
+                    </Grid>
+                </Border>
+          
+                <Border Grid.Row="1" Grid.Column="1" BorderThickness="0, 1, 1, 1" BorderBrush="Black" Background="White" CornerRadius="0, 0, 10, 0">
+                    <Grid RowDefinitions="*, *, *" ColumnDefinitions="0.7*, 0.3*">
+                        <TextBlock Margin="10, 0, 0, 0" Grid.Row="0" Grid.Column="0" Foreground="Black" VerticalAlignment="Center" FontSize="18">
+                            <Run Text="Distancia entre Válvulas"/>
+                            <Run Text=":"/>
+                        </TextBlock>
+                        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Margin="20" CornerRadius="10">
+                            <TextBlock FontWeight="Bold" Text="0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Border>
+
+                        <TextBlock Margin="10, 0, 0, 0" Grid.Row="1" Grid.Column="0" Foreground="Black" VerticalAlignment="Center" FontSize="18">
+                            <Run Text="Numero de Válvulas"/>
+                            <Run Text=":"/>
+                        </TextBlock>
+                        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Margin="20" CornerRadius="10">
+                            <TextBlock FontWeight="Bold" Text="0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Border>
+
+                        <TextBlock Margin="10, 0, 0, 0" Grid.Row="2" Grid.Column="0" Foreground="Black" VerticalAlignment="Center" FontSize="18">
+                            <Run Text="Tempo de Inercia"/>
+                            <Run Text=":"/>
+                        </TextBlock>
+                        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1" Margin="20" CornerRadius="10">
+                            <TextBlock FontWeight="Bold" Text="0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+            </Grid>
+            
+            <Button VerticalAlignment="Center" Height="50" Width="400" Background="Orange" CornerRadius="10" HorizontalAlignment="Center">
+                <Button.Styles>
+                    <Style Selector="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                    </Style>
+                    <Style Selector="Button:pointer /template/ ContentPresenter">
+                        <Setter Property="Background" Value="Orange" />
+                    </Style>
+                    <Style Selector="Button:pointerover /template/ ContentPresenter">
+                        <Setter Property="Background" Value="DarkOrange" />
+                    </Style>
+                    <Style Selector="Button:pressed /template/ ContentPresenter">
+                        <Setter Property="Background" Value="DarkGray" />
+                    </Style>
+                </Button.Styles>
+                <Button.Content>
+                    <TextBlock FontSize="22" Foreground="White" Margin="5,0,0,0" Text="Salvar Configuração" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Viewbox>
+    
+</UserControl>

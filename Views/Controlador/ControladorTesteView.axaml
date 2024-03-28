@@ -2,7 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:customControls="clr-namespace:MusicStoreApp.Views.CustomControls"
+             xmlns:controlador="clr-namespace:MusicStoreApp.ViewModels.Controlador"
              mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
+             x:DataType="controlador:ControladorTestViewModel"
              x:Class="MusicStoreApp.Views.Controlador.ControladorTesteView">
 
 	<Viewbox>
@@ -14,161 +17,14 @@
 					<Grid 
 						RowDefinitions="5,40,5,40,5,50"
 						ColumnDefinitions="5,90,5,90,5,90,5">
-						<Button 
-							Grid.Row="1" 
-							Grid.Column="1"
-							Grid.ColumnSpan="3"
-							Height="40" 
-							Background="#D9D9D9"
-							Margin="0"
-							VerticalAlignment="Center" 
-							HorizontalAlignment="Stretch"
-							BorderBrush="Black"
-							CornerRadius="8" >
-							<TextBlock 
-								Text="Inicializar Controlador" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
-						<Button
-							Grid.Row="3" 
-							Grid.Column="1"
-							Grid.ColumnSpan="3"
-							Height="40" 
-							Background="#D9D9D9"
-							Margin="0"
-							BorderBrush="Black"
-							VerticalAlignment="Center" 
-							HorizontalAlignment="Stretch"
-							CornerRadius="8" >
-							<TextBlock 
-								Text="Finalizar Controlador" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
-						<Button
-							Grid.Row="5"
-							Grid.Column="1"
-							FontSize="10" 
-							BorderBrush="Black"
-							VerticalContentAlignment="Stretch"
-							HorizontalContentAlignment="Stretch"
-							VerticalAlignment="Stretch"
-							HorizontalAlignment="Stretch"
-							Background="#D9D9D9" 
-							CornerRadius="8">
-							<TextBlock 
-								Text="Manobra Esquerda" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
 						
-						<Button
-							Grid.Row="5"
-							Grid.Column="3"
-							FontSize="10" 
-							BorderBrush="Black"
-							VerticalContentAlignment="Stretch"
-							HorizontalContentAlignment="Stretch"
-							VerticalAlignment="Stretch"
-							HorizontalAlignment="Stretch"
-							Background="#D9D9D9" 
-							CornerRadius="8">
-							<TextBlock 
-								Text="Manobra Direita" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
-
-						<Button
-							Grid.Row="1"
-							Grid.Column="5"
-							Width="90"
-							Height="40"
-							BorderBrush="Black"
-							VerticalContentAlignment="Center"
-							HorizontalContentAlignment="Center"
-							Background="#D9D9D9"
-							CornerRadius="8" >
-							<TextBlock 
-								Text="Zoom in" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
-						<Button 
-							Grid.Row="3"
-							Grid.Column="5" 
-							FontSize="10" 
-							BorderBrush="Black"
-							VerticalContentAlignment="Center"
-							HorizontalContentAlignment="Stretch"
-							Width="90" 
-							Height="40" 
-							Background="#D9D9D9"
-							CornerRadius="8">
-							<TextBlock 
-								Text="Zoom out" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
-						<Button
-							Grid.Row="5"
-							Grid.Column="5"
-							FontSize="10" 
-							BorderBrush="Black"
-							VerticalContentAlignment="Stretch"
-							HorizontalContentAlignment="Stretch"
-							VerticalAlignment="Stretch"
-							HorizontalAlignment="Stretch"
-							Background="#D9D9D9" 
-							CornerRadius="8">
-							<TextBlock 
-								Text="Vista Aerea" 
-								FontSize="11"
-								TextAlignment="Center"
-								TextWrapping="WrapWithOverflow"
-								Foreground="Black"
-								Background="Transparent"
-								FontWeight="Bold"
-								VerticalAlignment="Center" 
-								HorizontalAlignment="Stretch" />
-						</Button>
+						<customControls:ButtonSeba Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Inicializar Controlador"/>
+						<customControls:ButtonSeba Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Text="Finalizar Controlador"/>
+						<customControls:ButtonSeba Grid.Row="5" Grid.Column="1" Text="Manobra Esquerda"/>
+						<customControls:ButtonSeba Grid.Row="5" Grid.Column="3" Text="Manobra Direita"/>
+						<customControls:ButtonSeba Grid.Row="1" Grid.Column="5" Text="Zoom in"/>
+						<customControls:ButtonSeba Grid.Row="3" Grid.Column="5" Text="Zoom out"/>
+						<customControls:ButtonSeba Grid.Row="5" Grid.Column="5" Text="Vista Aerea"/>
 					</Grid>
 					
 					<!--  Tabelas Latitude e Longitude  -->
@@ -202,7 +58,11 @@
 								BorderBrush="Black"
 								BorderThickness="1,1,1,1" 
 								Background="White">
-								<Label />
+								<TextBlock
+									Foreground="Black"
+									FontWeight="Bold"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"/>
 							</Border>
 						</Grid>
 					<!--  Longitude  -->
@@ -231,7 +91,11 @@
 								BorderBrush="Black"
 								BorderThickness="1,1,1,1"
 								Background="White">
-								<Label />
+								<TextBlock
+									Foreground="Black"
+									FontWeight="Bold"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"/>
 							</Border>
 						</Grid>
 					</Grid>
@@ -239,10 +103,6 @@
 					<!--  Sliders e Radio Boxes  -->
 					<Border Margin="5, 10, 5, 10" CornerRadius="10" Background="LightGray">
 						<StackPanel>
-							<Slider
-								Width="265" 
-								Height="40"
-								Background="White" />
 							<Slider 
 								Width="265"
 								Height="45"
@@ -251,15 +111,16 @@
 						</StackPanel>
 					</Border>
 					
-					<Grid Margin="0, 0, 0,10" ColumnDefinitions="5,90,5,85,5">
+					<Grid Margin="0, 0, 0,5" ColumnDefinitions="5,90,5,85,5,85,5">
 						<!--  Radio Boxes Linha 1  -->
-						<Border Background="LightGray" Grid.Column="1" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+						<Border Background="LightGray" Grid.Column="1" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1">
 							<Grid>
 								<TextBlock
 									ZIndex="1"
 									Text="Navigation Mode" 
 									FontSize="11"
 									TextAlignment="Left"
+									Margin="5, 5, 0, 0"
 									TextWrapping="WrapWithOverflow"
 									Foreground="Black"
 									Background="Transparent"
@@ -278,13 +139,14 @@
 							</Grid>
 						</Border>
 
-						<Border Background="LightGray" Grid.Column="3" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+						<Border Background="LightGray" Grid.Column="3" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1">
 							<Grid>
 								<TextBlock
 									ZIndex="1"
 									Text="Perspective Mode" 
 									FontSize="11"
 									TextAlignment="Left"
+									Margin="5, 5, 0, 0"
 									TextWrapping="WrapWithOverflow"
 									Foreground="Black"
 									Background="Transparent"
@@ -302,483 +164,227 @@
 								</ToggleSwitch>	
 							</Grid>
 						</Border>
-						</Grid>
+
+						<Border Background="LightGray" Grid.Column="5" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1">
+							<Grid>
+								<TextBlock
+									ZIndex="1"
+									Text="Status" 
+									FontSize="11"
+									TextAlignment="Left"
+									Margin="5, 5, 0, 0"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Top" 
+									HorizontalAlignment="Left" />
+									
+								<ToggleSwitch Margin="5, 30, 0, 0" Background="Transparent" Foreground="Black" ZIndex="0" HorizontalAlignment="Left">
+									<ToggleSwitch.OnContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OnContent>
+									<ToggleSwitch.OffContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OffContent>
+								</ToggleSwitch>	
+							</Grid>
+						</Border>
+					</Grid>
 					
 					<!--  Segunda Linha de Botões  -->
-					<Grid Height="315" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RowDefinitions="*, *, *, *, *, *, *">
-						<Grid Margin="0, 5, 0, 0" Grid.Row="0" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
+					<Grid Height="360" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RowDefinitions="*, *, *, *, *, *, *, *">
+						<Expander x:Name="ExpanderRetaAb" ZIndex="7" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Red" BorderBrush="Black" BorderThickness="1">
+							<Expander.Header>
+								<TextBlock Text="Reta AB" FontSize="12"/>
+							</Expander.Header>
 							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-						</Grid>
-						<Grid Margin="0, 5, 0, 0" Grid.Row="1" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
+							<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+								<customControls:ButtonSeba Height="40" Width="80" Text="Ponto A" Margin="0, 0, 5, 0"/>
+								<customControls:ButtonSeba Height="40" Width="80" Text="Ponto B" Margin="0, 0, 5, 0"/>
+								<customControls:ButtonSeba Height="40" Width="80" Text="Reajustar" Margin="0, 0, 5, 0"/>
+							</StackPanel>
+						</Expander>
+		
+						<Grid ZIndex="6" Grid.Row="1" Grid.RowSpan="2" ColumnDefinitions="*, *">
+							<Expander x:Name="ExpanderCurvaAb" Grid.Column="0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Red" BorderBrush="Black" BorderThickness="1">
+								<Expander.Header>
+									<TextBlock Text="Curva AB" FontSize="12"/>
+								</Expander.Header>
 							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+									<customControls:ButtonSeba Height="40" Width="60" TextSize="10" Text="Ponto A" Margin="1, 0, 0, 0"/>
+									<customControls:ButtonSeba Height="40" Width="60" TextSize="10" Text="Ponto B" Margin="2, 0, 0, 0"/>
+								</StackPanel>
+							</Expander>
 
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+							<Expander x:Name="ExpanderCurvaLivre" ZIndex="5" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Red" BorderBrush="Black" BorderThickness="1">
+								<Expander.Header>
+									<TextBlock Text="Curva Livre" FontSize="12"/>
+								</Expander.Header>
+							
+								<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+									<customControls:ButtonSeba Height="40" Width="80" Text="Gravar" Margin="0, 0, 5, 0"/>
+								</StackPanel>
+							</Expander>
 						</Grid>
+
 						<Grid Margin="0, 5, 0, 0" Grid.Row="2" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
-							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-						</Grid>
-						<Grid Margin="0, 5, 0, 0" Grid.Row="2" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
-							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+							<customControls:ButtonSeba Grid.Column="1" Text="Importar Linha"/>
+							<customControls:ButtonSeba Grid.Column="3" Text="Corte Manual"/>
+							<customControls:ButtonSeba Grid.Column="5" Text="Corte Automatico"/>
 						</Grid>
 						<Grid Margin="0, 5, 0, 0" Grid.Row="3" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
-							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+							<customControls:ButtonSeba Grid.Column="1" Text="Bandeira"/>
+							<customControls:ButtonSeba Grid.Column="3" Text="Realinhar Centro"/>
+							<customControls:ButtonSeba Grid.Column="5" Text="Realinhar Zero"/>
 						</Grid>
 						<Grid Margin="0, 5, 0, 0" Grid.Row="4" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
-							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+							<customControls:ButtonSeba Grid.Column="3" Text="Realinhar Esqueda"/>
+							<customControls:ButtonSeba Grid.Column="5" Text="Realinhar Direita"/>
 						</Grid>
 						<Grid Margin="0, 5, 0, 0" Grid.Row="5" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
-							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+							<customControls:ButtonSeba Grid.Column="3" Text="Nova Bordadura"/>
+							<customControls:ButtonSeba Grid.Column="5" Text="Fechar Bordadura"/>
 						</Grid>
+						
+						<Border Grid.Row="4" Grid.RowSpan="2" Margin="5" Width="90" Background="LightGray" CornerRadius="10" HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="Black" BorderThickness="1">
+							<Grid>
+								<TextBlock
+									ZIndex="1"
+									Text="Visivilidade Bordadura" 
+									FontSize="11"
+									TextAlignment="Left"
+									Margin="5, 5, 0, 0"
+									TextWrapping="WrapWithOverflow"
+									Foreground="Black"
+									Background="Transparent"
+									FontWeight="Bold"
+									VerticalAlignment="Top" 
+									HorizontalAlignment="Left" />
+									
+								<ToggleSwitch Margin="5, 30, 0, 0" Background="Transparent" Foreground="Black" ZIndex="0" HorizontalAlignment="Left">
+									<ToggleSwitch.OnContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OnContent>
+									<ToggleSwitch.OffContent>
+										<Border Background="Transparent"/>
+									</ToggleSwitch.OffContent>
+								</ToggleSwitch>	
+							</Grid>
+						</Border>
+						
 						<Grid Margin="0, 5, 0, 0" Grid.Row="6" ColumnDefinitions="5,90,5,90,5,90,5">
-							<Button
-								Grid.Column="1" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Center" />
-							</Button>
-							
-							<Button
-								Grid.Column="3" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
-
-							<Button
-								Grid.Column="5" 
-								FontSize="10" 
-								BorderBrush="Black"
-								Background="#D9D9D9"
-								HorizontalAlignment="Stretch"
-								CornerRadius="8">
-								<TextBlock 
-									Text="Test" 
-									FontSize="11"
-									TextAlignment="Center"
-									TextWrapping="WrapWithOverflow"
-									Foreground="Black"
-									Background="Transparent"
-									FontWeight="Bold"
-									VerticalAlignment="Center" 
-									HorizontalAlignment="Stretch" />
-							</Button>
+							<customControls:ButtonSeba Grid.Column="1" Text="Realinhar B Centro"/>
+							<customControls:ButtonSeba Grid.Column="3" Text="Realinhar B Esquerda"/>
+							<customControls:ButtonSeba Grid.Column="5" Text="Realinhar B Direita"/>
 						</Grid>
+				
+						<Grid Margin="0, 5, 0, 0" Grid.Row="7" ColumnDefinitions="5,90,5,90,5,90,5">
+							<customControls:ButtonSeba Grid.Column="1" Text="Realinhar B Zero"/>
+							<customControls:ButtonSeba Grid.Column="3" Text="Realinhar B Arriba"/>
+							<customControls:ButtonSeba Grid.Column="5" Text="Realinhar B Baixo"/>
+						</Grid>
+
 					</Grid>
 				</StackPanel>
 			</Border>
 
 			<!--  Content Mapa  -->
 			<Border Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="1, 0, 0, 0">
-				<Grid />
 			</Border>
+
 			
+			<StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
+				<Border Width="250" Height="400" BorderBrush="Black" BorderThickness="1, 1, 0, 0">
+					<Grid RowDefinitions="*, *">
+						<Grid Grid.Row="0"
+							Margin="5"
+							RowDefinitions="*, 5*, *">
+							<TextBlock
+								Grid.Row="0"
+								Grid.Column="0"
+								Margin="5,0,0,5"
+								VerticalAlignment="Center"
+								FontSize="14"
+								FontWeight="Bold"
+								Foreground="Black"
+								Text="Linhas Salvas"
+								TextWrapping="Wrap" />
+							<Border
+								Grid.Row="1"
+								Grid.Column="0"
+								BorderBrush="Black"
+								BorderThickness="1" />
+
+							<ScrollViewer Grid.Row="1">
+								<ListBox
+									Margin="1"
+									Background="Transparent">
+									<ListBox.ItemTemplate>
+										<DataTemplate>
+											<StackPanel
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center"
+												Orientation="Horizontal">
+												<TextBlock
+													VerticalAlignment="Center"
+													FontSize="18"
+													Foreground="Black"/>
+											</StackPanel>
+										</DataTemplate>
+									</ListBox.ItemTemplate>
+								</ListBox>	
+							</ScrollViewer>
+
+							<Grid Grid.Row="2" ColumnDefinitions="*, *, *">
+								<customControls:ButtonSeba Grid.Column="0" Text="Carregar"/>
+								<customControls:ButtonSeba Grid.Column="1" Text="Apagar"/>
+							</Grid>
+						</Grid>
+
+						<Grid Grid.Row="1"
+						      Margin="5"
+						      RowDefinitions="*, 7*">
+							<TextBlock
+								Grid.Row="0"
+								Grid.Column="0"
+								Margin="5,0,0,5"
+								VerticalAlignment="Center"
+								FontSize="14"
+								FontWeight="Bold"
+								Foreground="Black"
+								Text="Alarmes"
+								TextWrapping="Wrap" />
+							<Border
+								Grid.Row="1"
+								Grid.Column="0"
+								BorderBrush="Black"
+								BorderThickness="1" />
+
+							<ScrollViewer Grid.Row="1">
+								<ListBox
+									Margin="1"
+									Background="Transparent">
+									<ListBox.ItemTemplate>
+										<DataTemplate>
+											<StackPanel
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center"
+												Orientation="Horizontal">
+												<TextBlock
+													VerticalAlignment="Center"
+													FontSize="18"
+													Foreground="Black"/>
+											</StackPanel>
+										</DataTemplate>
+									</ListBox.ItemTemplate>
+								</ListBox>	
+							</ScrollViewer>
+						</Grid>
+					</Grid>
+				</Border>
+			</StackPanel>
 		</Grid>
 	</Viewbox>
     

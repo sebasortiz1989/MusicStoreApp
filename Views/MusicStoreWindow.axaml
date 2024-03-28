@@ -18,7 +18,7 @@
                     MaterialOpacity="0.65" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
-
+        
         <Panel Margin="40">
             <views:MusicStoreView/>
         </Panel>

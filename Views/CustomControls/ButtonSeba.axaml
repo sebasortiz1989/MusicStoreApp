@@ -1,0 +1,63 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:customControls="clr-namespace:MusicStoreApp.Views.CustomControls">
+    <Design.PreviewWith>
+        <customControls:ButtonSeba />
+    </Design.PreviewWith>
+
+    <Style Selector="customControls|ButtonSeba">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Button
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}"
+                    Background="{TemplateBinding Background}"
+                    Margin="{TemplateBinding Margin}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    Command="{TemplateBinding Command}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center">
+                    <StackPanel>
+                        <TextBlock
+                            IsVisible="{TemplateBinding IsTextVisible}"
+                            Text="{TemplateBinding Text}"
+                            FontSize="{TemplateBinding TextSize}"
+                            TextAlignment="Center"
+                            TextWrapping="WrapWithOverflow"
+                            Foreground="Black"
+                            Background="Transparent"
+                            FontWeight="Bold"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Stretch" />   
+                        <Path
+                            x:Name="GeometryIcon"
+                            Width="48"
+                            Height="58"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Data="{TemplateBinding Geometry}"
+                            Fill="Black" />
+                    </StackPanel>
+
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderBrush" Value="Black" />
+                        </Style>
+                        <Style Selector="Button:pointerover /template/ ContentPresenter">
+                            <Setter Property="Background" Value="LightGray" />
+                            <Setter Property="BorderBrush" Value="Black" />
+                        </Style>
+                        <Style Selector="Button:pressed /template/ ContentPresenter">
+                            <Setter Property="Background" Value="DarkOrange" />
+                            <Setter Property="BorderBrush" Value="Black" />
+                        </Style>
+                    </Button.Styles>
+                </Button>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

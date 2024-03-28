@@ -12,5 +12,6 @@
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="avares://MusicStoreApp/Icons.axaml" />
+        <StyleInclude Source="avares://MusicStoreApp/Views/CustomControls/ButtonSeba.axaml" />
     </Application.Styles>
 </Application>

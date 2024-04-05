@@ -291,11 +291,14 @@
 			</Border>
 
 			<!--  Content Mapa  -->
-			<Border Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="1, 0, 0, 0">
+			<Border Height="720" Grid.Column="1" Background="#143F66" BorderBrush="Black" BorderThickness="1, 0, 0, 0" VerticalAlignment="Center">
+				<StackPanel VerticalAlignment="Center">
+					<customControls:InformationFrame TextoUnidade="ha"/>
+				</StackPanel>
 			</Border>
 
 			
-			<StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
+			<StackPanel IsVisible="False" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
 				<Border Width="250" Height="400" BorderBrush="Black" BorderThickness="1, 1, 0, 0">
 					<Grid RowDefinitions="*, *">
 						<Grid Grid.Row="0"

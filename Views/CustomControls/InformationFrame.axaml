@@ -2,6 +2,7 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="using:MusicStoreApp.Views.CustomControls">
+
     <Design.PreviewWith>
         <controls:InformationFrame />
     </Design.PreviewWith>
@@ -14,14 +15,14 @@
         <!--  Set Defaults  -->
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Background="#143F66">
+                <Border Background="Transparent">
                     <StackPanel VerticalAlignment="Top">
                         <Border
+                            x:Name="TitleBorder"
                             Width="181"
                             Height="28"
                             Background="#040404">
                             <TextBlock
-                                x:Name="HelloWorld"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 FontFamily="Roboto"
@@ -39,8 +40,7 @@
                                     Grid.Column="0"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
-                                    Data="{TemplateBinding StringSvg,
-                                                           Converter={x:Static controls:Converters.StringToGeometryConverter}}"
+                                    Data="{TemplateBinding SvgIcon}"
                                     Foreground="#5DE4FF" />
 
                                 <Grid
@@ -60,11 +60,9 @@
                                         FontSize="32"
                                         FontWeight="400"
                                         Foreground="#FFFFFF"
-                                        Text="{TemplateBinding Dado,
-                                                               Converter={x:Static controls:Converters.IntToStringConverter}}" />
+                                        Text="{TemplateBinding Dado, Converter={x:Static controls:Converters.IntToStringConverter}}" />
 
                                     <Border
-                                        x:Name="FrameUnidadePaulinho"
                                         Grid.Column="1"
                                         Width="52"
                                         Height="57"
@@ -89,4 +87,39 @@
             </ControlTemplate>
         </Setter>
     </Style>
+    
+    <!--  Animacao abrir  -->
+    <Style Selector="controls|InformationFrame[IsExpanded=true] /template/ Border#TitleBorder">
+        <Style.Animations>
+            <Animation
+                Easing="QuadraticEaseOut"
+                FillMode="Forward"
+                Duration="0:0:.2">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Height" Value="0" />
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Height" Value="28" />
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+
+    <!--  Animacao fechar  -->
+    <Style Selector="controls|InformationFrame[IsExpanded=false] /template/ Border#TitleBorder">
+        <Style.Animations>
+            <Animation
+                Easing="QuadraticEaseOut"
+                FillMode="Forward"
+                Duration="0:0:.2">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Height" Value="28" />
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Height" Value="0" />
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+    
 </Styles>

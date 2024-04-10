@@ -294,6 +294,7 @@
 			<Border Height="720" Grid.Column="1" Background="#143F66" BorderBrush="Black" BorderThickness="1, 0, 0, 0" VerticalAlignment="Center">
 				<StackPanel VerticalAlignment="Center">
 					<customControls:InformationFrame TextoUnidade="ha"/>
+					<TextBox Text="Hello World" HorizontalAlignment="Center"/>
 				</StackPanel>
 			</Border>
 

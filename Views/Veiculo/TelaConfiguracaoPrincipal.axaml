@@ -11,7 +11,13 @@
              x:DataType="veiculo:ModeloApresentacaoConfiguracaoVeiculoGuia">
     
     <UserControl.Resources>
-        <StreamGeometry x:Key="IconVoltar">M7.625 21C6.96875 21 6.5 20.5312 6.5 19.875L6.5 14.25C6.5 13.9688 6.59375 13.7344 6.78125 13.5L12.0312 7.875C12.2656 7.64063 12.5469 7.5 12.875 7.5C13.1562 7.54688 13.4844 7.64063 13.6719 7.875L17 11.5313L19.2031 9.375C19.3906 9.14063 19.7188 9 20.0469 9.04688C20.3281 9.04688 20.6562 9.1875 20.8438 9.42188L24.2188 13.5469C24.4062 13.7813 24.5 14.0156 24.5 14.25L24.5 19.875C24.5 20.5313 23.9844 21 23.375 21L7.625 21ZM8.75 14.7188L8.75 18.75L22.25 18.75V14.6719L19.9062 11.8125L17.7969 13.9219C17.5625 14.1563 17.2812 14.2969 16.9531 14.25C16.625 14.25 16.3438 14.1094 16.1562 13.9219L12.8281 10.3125L8.75 14.7188ZM24.875 23.25C25.4844 23.25 26 23.7656 26 24.375C26 25.0313 25.4844 25.5 24.875 25.5L3.5 25.5C2.65625 25.5 2 24.8438 2 24L2 5.625C2 5.01562 2.46875 4.5 3.125 4.5C3.73437 4.5 4.25 5.01562 4.25 5.625L4.25 23.25L24.875 23.25Z</StreamGeometry>
+        <StreamGeometry x:Key="IconDados">M18.5 0C20.1406 0 21.5 1.35938 21.5 3V21C21.5 22.6875 20.1406 24 18.5 24H3.5C1.8125 24 0.5 22.6875 0.5 21V3C0.5 1.35938 1.8125 0 3.5 0H18.5ZM3.5 5.25V6.75C3.5 7.17188 3.82812 7.5 4.25 7.5H5.75C6.125 7.5 6.5 7.17188 6.5 6.75V5.25C6.5 4.875 6.125 4.5 5.75 4.5H4.25C3.82812 4.5 3.5 4.875 3.5 5.25ZM6.5 18.75V17.25C6.5 16.875 6.125 16.5 5.75 16.5H4.25C3.82812 16.5 3.5 16.875 3.5 17.25V18.75C3.5 19.1719 3.82812 19.5 4.25 19.5H5.75C6.125 19.5 6.5 19.1719 6.5 18.75ZM8.14062 10.6875C8.42188 10.4062 8.42188 9.89062 8.14062 9.60938C7.85938 9.32812 7.34375 9.32812 7.0625 9.60938L5 11.7188L4.39062 11.1094C4.10938 10.8281 3.59375 10.8281 3.3125 11.1094C3.03125 11.3906 3.03125 11.9062 3.3125 12.1875L4.4375 13.3125C4.57812 13.4531 4.76562 13.5 5 13.5C5.1875 13.5 5.375 13.4531 5.51562 13.3125L8.14062 10.6875ZM17.75 18.75C18.125 18.75 18.5 18.4219 18.5 18C18.5 17.625 18.125 17.25 17.75 17.25H10.25C9.82812 17.25 9.5 17.625 9.5 18C9.5 18.4219 9.82812 18.75 10.25 18.75H17.75ZM17.75 12.75C18.125 12.75 18.5 12.4219 18.5 12C18.5 11.625 18.125 11.25 17.75 11.25H10.25C9.82812 11.25 9.5 11.625 9.5 12C9.5 12.4219 9.82812 12.75 10.25 12.75H17.75ZM17.75 6.75C18.125 6.75 18.5 6.42188 18.5 6C18.5 5.625 18.125 5.25 17.75 5.25H10.25C9.82812 5.25 9.5 5.625 9.5 6C9.5 6.42188 9.82812 6.75 10.25 6.75H17.75Z</StreamGeometry>
+        <StreamGeometry x:Key="IconGears">M15.4214 9.96924C15.6089 10.1099 15.7496 10.3442 15.6558 10.5786C15.3277 11.563 14.7652 12.5005 14.0621 13.2974C13.9683 13.3911 13.8277 13.438 13.7339 13.438C13.6402 13.438 13.5464 13.438 13.4527 13.3911L12.0933 12.5942C11.5308 13.1099 10.8746 13.4849 10.1714 13.7192V15.313C10.1714 15.5474 9.98394 15.7349 9.74957 15.7817C9.23394 15.8755 8.71832 15.9692 8.20269 15.9692C7.64019 15.9692 7.12457 15.8755 6.60894 15.7817C6.37457 15.7349 6.18707 15.5474 6.18707 15.313V13.7192C5.48394 13.4849 4.82769 13.1099 4.26519 12.5942L2.90582 13.3911C2.81207 13.438 2.71832 13.438 2.62457 13.438C2.53082 13.438 2.39019 13.3911 2.29644 13.2505C1.59332 12.4536 1.03082 11.5161 0.702692 10.5317C0.608942 10.3442 0.749567 10.1099 0.937067 9.96924L2.29644 9.17236C2.20269 8.84424 2.20269 8.46924 2.20269 8.09424C2.20269 7.67236 2.20269 7.29736 2.29644 6.92236L0.937067 6.17236C0.749567 6.03174 0.608942 5.79736 0.702692 5.56299C1.03082 4.53174 1.59332 3.64111 2.29644 2.84424C2.39019 2.75049 2.53082 2.65674 2.62457 2.65674C2.71832 2.65674 2.81207 2.70361 2.90582 2.75049L4.26519 3.54736C4.82769 3.07861 5.48394 2.70361 6.18707 2.42236V0.828613C6.18707 0.594238 6.37457 0.406738 6.60894 0.359863C7.12457 0.266113 7.64019 0.172363 8.20269 0.172363C8.71832 0.172363 9.23394 0.266113 9.74957 0.359863C9.98394 0.406738 10.1714 0.594238 10.1714 0.828613V2.42236C10.8746 2.70361 11.5308 3.07861 12.0933 3.54736L13.4527 2.75049C13.5464 2.70361 13.6402 2.65674 13.7339 2.65674C13.8277 2.65674 13.9683 2.75049 14.0621 2.84424C14.7652 3.64111 15.3277 4.53174 15.6558 5.56299C15.7496 5.79736 15.6089 6.03174 15.4214 6.17236L14.0621 6.92236C14.1558 7.29736 14.2027 7.67236 14.2027 8.09424C14.2027 8.46924 14.1558 8.84424 14.0621 9.17236L15.4214 9.96924ZM8.20269 10.3442C9.42144 10.3442 10.4527 9.31299 10.4527 8.09424C10.4527 6.82861 9.42144 5.84424 8.20269 5.84424C6.93707 5.84424 5.95269 6.82861 5.95269 8.09424C5.95269 9.31299 6.93707 10.3442 8.20269 10.3442ZM30.1402 14.7505C30.2339 15.2661 30.3277 15.7817 30.3277 16.2974C30.3277 16.8599 30.2339 17.3755 30.1402 17.8911C30.0933 18.1255 29.9058 18.313 29.6714 18.313H28.0777C27.7964 19.0161 27.4214 19.6724 26.9527 20.2349L27.7496 21.5942C27.7964 21.688 27.7964 21.7817 27.7964 21.8755C27.7964 21.9692 27.7496 22.1099 27.6558 22.2036C26.8589 22.9067 25.9214 23.4692 24.9371 23.7974C24.7027 23.8911 24.4683 23.7505 24.3277 23.563L23.5308 22.2036C23.2027 22.2974 22.7808 22.2974 22.4058 22.2974C22.0308 22.2974 21.6558 22.2974 21.2808 22.2036L20.5308 23.563C20.3902 23.7505 20.1558 23.8911 19.9214 23.7974C18.8902 23.4692 17.9527 22.9067 17.2027 22.2036C17.0621 22.1099 17.0152 21.9692 17.0152 21.8755C17.0152 21.7817 17.0621 21.688 17.1089 21.5942L17.9058 20.2349C17.3902 19.6724 17.0152 19.0161 16.7808 18.313H15.1871C14.9527 18.313 14.7652 18.1255 14.7183 17.8911C14.5777 17.3755 14.5308 16.8599 14.5308 16.2974C14.5308 15.7817 14.5777 15.2661 14.7183 14.7505C14.7652 14.5161 14.9527 14.3286 15.1871 14.3286H16.7808C17.0152 13.6255 17.3902 12.9692 17.9058 12.4067L17.1089 11.0474C17.0621 10.9536 17.0152 10.8599 17.0152 10.7661C17.0152 10.6724 17.1089 10.5317 17.2027 10.438C17.9996 9.73486 18.8902 9.17236 19.9214 8.84424C20.1558 8.75049 20.3902 8.89111 20.5308 9.07861L21.2808 10.438C21.6558 10.3442 22.0308 10.2974 22.4058 10.2974C22.7808 10.2974 23.1558 10.3442 23.5308 10.438L24.3277 9.07861C24.4683 8.89111 24.7027 8.75049 24.8902 8.84424C25.9214 9.17236 26.8589 9.73486 27.6558 10.438C27.7496 10.5317 27.7964 10.6724 27.7964 10.7661C27.7964 10.8599 27.7964 10.9536 27.7496 11.0474L26.9527 12.4067C27.4214 12.9692 27.7964 13.6255 28.0777 14.3286H29.6714C29.9058 14.3286 30.0933 14.5161 30.1402 14.7505ZM22.4058 18.5474C23.6714 18.5474 24.6558 17.563 24.6558 16.2974C24.6558 15.0786 23.6714 14.0474 22.4058 14.0474C21.1871 14.0474 20.1558 15.0786 20.1558 16.2974C20.1558 17.563 21.1871 18.5474 22.4058 18.5474Z</StreamGeometry>
+        <StreamGeometry x:Key="IconVeiculo">M4.5 3C4.5 1.35938 5.8125 0 7.5 0H12.4688C13.6875 0 14.8125 0.75 15.2344 1.92188L17.4844 7.5H22.5V5.95312C22.5 4.78125 22.7344 3.60938 23.25 2.57812L23.3906 2.34375C23.7656 1.59375 24.6562 1.3125 25.4062 1.6875C26.1562 2.0625 26.4375 2.95312 26.0625 3.70312L25.9688 3.9375C25.6406 4.54688 25.5 5.25 25.5 5.95312V7.5H28.125C29.1562 7.5 30 8.34375 30 9.375V11.5312C30 12.2812 29.5781 13.0312 28.9219 13.4531L26.9062 14.7188C26.2031 14.4375 25.5 14.25 24.75 14.25C22.875 14.25 21.2344 15.1406 20.2031 16.5H16.5C16.5 17.3438 15.7969 18 15 18H14.5781C14.5312 18.2344 14.4375 18.4688 14.2969 18.7031L14.5781 18.9375C15.1875 19.5469 15.1875 20.4844 14.5781 21.0938L13.5469 22.125C12.9375 22.7344 12 22.7344 11.3906 22.125L11.1562 21.8438C10.9219 21.9844 10.6875 22.0781 10.5 22.125V22.5C10.5 23.3438 9.79688 24 9 24H7.5C6.65625 24 6 23.3438 6 22.5V22.125C5.76562 22.0781 5.53125 21.9844 5.29688 21.8438L5.0625 22.125C4.45312 22.7344 3.51562 22.7344 2.90625 22.125L1.875 21.0938C1.26562 20.4844 1.26562 19.5469 1.875 18.9375L2.15625 18.7031C2.01562 18.4688 1.92188 18.2344 1.875 18H1.5C0.65625 18 0 17.3438 0 16.5V15C0 14.2031 0.65625 13.5 1.5 13.5H1.875C1.92188 13.3125 2.01562 13.0781 2.15625 12.8438L1.875 12.6094C1.26562 12 1.26562 11.0625 1.875 10.4531L2.90625 9.42188C3.32812 9 3.9375 8.85938 4.5 9.04688V3ZM7.5 3V7.5H14.25L12.4688 3H7.5ZM8.25 12C6.14062 12 4.5 13.6875 4.5 15.75C4.5 17.8594 6.14062 19.5 8.25 19.5C10.3125 19.5 12 17.8594 12 15.75C12 13.6875 10.3125 12 8.25 12ZM20.625 19.875C20.625 18.5156 21.2812 17.25 22.3594 16.5C23.0156 16.0312 23.8594 15.75 24.75 15.75C24.8438 15.75 24.9844 15.7969 25.0781 15.7969C27.1875 15.9844 28.875 17.7656 28.875 19.875C28.875 22.1719 27 24 24.75 24C22.4531 24 20.625 22.1719 20.625 19.875ZM24.75 21C25.3594 21 25.875 20.5312 25.875 19.875C25.875 19.2656 25.3594 18.75 24.75 18.75C24.0938 18.75 23.625 19.2656 23.625 19.875C23.625 20.5312 24.0938 21 24.75 21Z</StreamGeometry>
+        <StreamGeometry x:Key="IconGps">M24.5454 13.4082C24.8267 13.6895 25.0142 14.1113 25.0142 14.4863C25.0142 14.8613 24.8267 15.2832 24.4985 15.5176L19.9517 20.0645C19.436 20.6738 18.4985 20.6738 17.8892 20.0645L14.1392 16.3145L13.6704 16.7832C14.8423 19.3145 14.7485 22.2207 13.436 24.6582C13.2017 25.0801 12.6392 25.127 12.3579 24.7988L7.29541 19.7832L6.45166 20.5801C6.49854 20.7207 6.54541 20.8145 6.54541 20.9551C6.54541 21.7988 5.88916 22.4551 5.04541 22.4551C4.20166 22.4551 3.54541 21.7988 3.54541 20.9551C3.54541 20.1582 4.20166 19.4551 5.04541 19.4551C5.18604 19.4551 5.27979 19.502 5.42041 19.5488L6.26416 18.7051L1.20166 13.6895C0.873535 13.3613 0.92041 12.7988 1.34229 12.5645C3.77979 11.252 6.68604 11.1582 9.21729 12.3301L9.68604 11.8613L5.93604 8.11133C5.32666 7.50195 5.32666 6.56445 5.93604 5.95508L10.4829 1.45508C10.7173 1.17383 11.1392 0.986328 11.5142 0.986328C11.8892 0.986328 12.311 1.17383 12.5923 1.45508L16.3423 5.1582L18.5923 2.9082C19.2017 2.29883 20.186 2.29883 20.7954 2.9082L23.0454 5.1582C23.6548 5.76758 23.6548 6.75195 23.0454 7.36133L20.7954 9.61133L24.5454 13.4082ZM11.2798 10.2676L14.7485 6.79883L11.5142 3.56445L8.04541 7.0332L11.2798 10.2676ZM18.9673 17.9551L22.436 14.4863L19.2017 11.252L15.7329 14.7207L18.9673 17.9551Z</StreamGeometry>
+        <StreamGeometry x:Key="IconTrabalho">M26.0244 12.1719L25.9775 15.5H1.97754L2.02441 12.1719C2.02441 8 4.88379 4.4375 8.54004 2.9375L11.0244 7.20312V1.34375C11.0244 0.875 11.3525 0.5 11.8213 0.5H16.1807C16.6494 0.5 17.0244 0.875 17.0244 1.34375V7.20312L19.4619 2.9375C23.1182 4.4375 26.0244 8 26.0244 12.1719ZM27.4307 17.4688C27.5713 17.75 27.5244 18.0781 27.2432 18.2656C27.1025 18.4062 24.0557 21.5 13.9775 21.5C3.89941 21.5 0.852539 18.4062 0.711914 18.2656C0.477539 18.0781 0.430664 17.75 0.571289 17.4688C0.665039 17.1875 0.946289 17 1.27441 17H26.7744C27.0557 17 27.3369 17.1875 27.4307 17.4688Z</StreamGeometry>
+        <StreamGeometry x:Key="IconUser">M11 12C7.67188 12 5 9.32812 5 6C5 2.71875 7.67188 0 11 0C14.2812 0 17 2.71875 17 6C17 9.32812 14.2812 12 11 12ZM13.3438 14.25C17.8438 14.25 21.5 17.9062 21.5 22.4062C21.5 23.2969 20.75 24 19.8594 24H2.09375C1.20312 24 0.5 23.2969 0.5 22.4062C0.5 17.9062 4.10938 14.25 8.60938 14.25H13.3438Z</StreamGeometry>
+        <StreamGeometry x:Key="IconVoltar">M2 0C2.79688 0 3.5 0.703125 3.5 1.5V16.5C3.5 17.3438 2.70312 18 1.95312 18C1.15625 18 0.5 17.3438 0.5 16.5V1.5C0.5 0.703125 1.15625 0 2 0ZM5.32812 9.84375C4.85938 9.42188 4.85938 8.625 5.32812 8.20312L12.0781 1.82812C12.4062 1.5 12.875 1.45312 13.2969 1.59375C13.7188 1.78125 13.9531 2.20312 13.9531 2.625V6H20C20.7969 6 21.5 6.70312 21.5 7.5V10.5C21.5 11.3438 20.7969 12 20 12H13.9531V15.4219C13.9531 15.8438 13.7188 16.2656 13.2969 16.4531C12.875 16.5938 12.4062 16.5469 12.0781 16.2188L5.32812 9.84375Z</StreamGeometry>
     </UserControl.Resources>
 
     <Viewbox>
@@ -22,31 +28,101 @@
                 OpenLength="300"
                 Height="800"
                 Background="Transparent"
-                VerticalAlignment="Top"
-                ItemsSource="{Binding NomeBotoesSeletor}">
+                VerticalAlignment="Top">
 
                 <Grid>
-                    <ItemsControl x:Name="ItemsControlT" ItemsSource="{Binding NomeBotoesSeletor}" VerticalAlignment="Top">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <buttons:CustomButton
-                                    Width="220"
-                                    UncheckedBackground="Transparent"
-                                    CheckedBackground="Transparent"
-                                    ToggleButtonCornerRadius="0"
-                                    ButtonContent="LeftIconAndText"
-                                    ToggleHorizontalAlignment="Stretch"
-                                    HorizontalAlignment="Left"
-                                    TextHorizontalAlignment="Left"
-                                    IconHorizontalAlignment="Left"
-                                    ButtonText="{Binding NomeBotao}"
-                                    IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                                    IconForegroundChecked="Aqua"
-                                    IconForegroundUnchecked="Aqua"
-                                    SvgStringLeft="{Binding SvgString}"/>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                    <StackPanel>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="Configurações"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            LeftIcon="{StaticResource IconGears}"/>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="Veículo"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            LeftIcon="{StaticResource IconVeiculo}"/>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="GPS"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            LeftIcon="{StaticResource IconGps}"/>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="Trabalho"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            LeftIcon="{StaticResource IconTrabalho}"/>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="Dados"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            LeftIcon="{StaticResource IconDados}"/>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="Meu Aplicativo"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            LeftIcon="{StaticResource IconUser}"/>
+                    </StackPanel>
                     
                     <buttons:CustomButton
                         VerticalAlignment="Bottom"
@@ -54,7 +130,7 @@
                         UncheckedBackground="Transparent"
                         CheckedBackground="Transparent"
                         ToggleButtonCornerRadius="0"
-                        ButtonContent="LeftIconAndText"
+                        ButtonContent="LeftIconAndTextButton"
                         ToggleHorizontalAlignment="Stretch"
                         HorizontalAlignment="Left"
                         TextHorizontalAlignment="Left"

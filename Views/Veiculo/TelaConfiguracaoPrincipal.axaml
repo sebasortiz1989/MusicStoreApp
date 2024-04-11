@@ -24,50 +24,32 @@
                 Background="Transparent"
                 VerticalAlignment="Top"
                 ItemsSource="{Binding NomeBotoesSeletor}">
-                
-                <buttons:ButtonListExpander.ItemTemplate>
-                    <DataTemplate>
-                        <buttons:CustomButton
-                            Width="220"
-                            UncheckedBackground="Transparent"
-                            CheckedBackground="Transparent"
-                            ToggleButtonCornerRadius="0"
-                            ButtonContent="LeftIconAndText"
-                            ToggleHorizontalAlignment="Stretch"
-                            HorizontalAlignment="Left"
-                            TextHorizontalAlignment="Left"
-                            IconHorizontalAlignment="Left"
-                            ButtonText="{Binding NomeBotao}"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
-                            SvgStringLeft="{Binding SvgString}"/>
-                    </DataTemplate>
-                </buttons:ButtonListExpander.ItemTemplate>
 
-                <Grid VerticalAlignment="Bottom">
-                    
-                    <ItemsControl x:Name="ItemsControlT" ItemsSource="{Binding NomeBotoesSeletor}">
-                        <DataTemplate>
-                            <buttons:CustomButton
-                                Width="220"
-                                UncheckedBackground="Transparent"
-                                CheckedBackground="Transparent"
-                                ToggleButtonCornerRadius="0"
-                                ButtonContent="LeftIconAndText"
-                                ToggleHorizontalAlignment="Stretch"
-                                HorizontalAlignment="Left"
-                                TextHorizontalAlignment="Left"
-                                IconHorizontalAlignment="Left"
-                                ButtonText="{Binding NomeBotao, Source={RelativeSource Mode=DataContext}}"
-                                IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                                IconForegroundChecked="Aqua"
-                                IconForegroundUnchecked="Aqua"
-                                SvgStringLeft="{Binding SvgString}"/>
-                        </DataTemplate>
+                <Grid>
+                    <ItemsControl x:Name="ItemsControlT" ItemsSource="{Binding NomeBotoesSeletor}" VerticalAlignment="Top">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <buttons:CustomButton
+                                    Width="220"
+                                    UncheckedBackground="Transparent"
+                                    CheckedBackground="Transparent"
+                                    ToggleButtonCornerRadius="0"
+                                    ButtonContent="LeftIconAndText"
+                                    ToggleHorizontalAlignment="Stretch"
+                                    HorizontalAlignment="Left"
+                                    TextHorizontalAlignment="Left"
+                                    IconHorizontalAlignment="Left"
+                                    ButtonText="{Binding NomeBotao}"
+                                    IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                                    IconForegroundChecked="Aqua"
+                                    IconForegroundUnchecked="Aqua"
+                                    SvgStringLeft="{Binding SvgString}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
                     </ItemsControl>
                     
                     <buttons:CustomButton
+                        VerticalAlignment="Bottom"
                         Width="220"
                         UncheckedBackground="Transparent"
                         CheckedBackground="Transparent"

@@ -1,0 +1,92 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:buttons="clr-namespace:Verion.Apresentacao.Avalonia.Buttons;assembly=Verion.Apresentacao.Avalonia"
+             xmlns:veiculo="clr-namespace:MusicStoreApp.ViewModels.Veiculo"
+             mc:Ignorable="d"
+             d:DesignWidth="1280"
+             d:DesignHeight="800"
+             x:Class="MusicStoreApp.Views.Veiculo.TelaConfiguracaoPrincipal"
+             x:DataType="veiculo:ModeloApresentacaoConfiguracaoVeiculoGuia">
+    
+    <UserControl.Resources>
+        <StreamGeometry x:Key="IconVoltar">M7.625 21C6.96875 21 6.5 20.5312 6.5 19.875L6.5 14.25C6.5 13.9688 6.59375 13.7344 6.78125 13.5L12.0312 7.875C12.2656 7.64063 12.5469 7.5 12.875 7.5C13.1562 7.54688 13.4844 7.64063 13.6719 7.875L17 11.5313L19.2031 9.375C19.3906 9.14063 19.7188 9 20.0469 9.04688C20.3281 9.04688 20.6562 9.1875 20.8438 9.42188L24.2188 13.5469C24.4062 13.7813 24.5 14.0156 24.5 14.25L24.5 19.875C24.5 20.5313 23.9844 21 23.375 21L7.625 21ZM8.75 14.7188L8.75 18.75L22.25 18.75V14.6719L19.9062 11.8125L17.7969 13.9219C17.5625 14.1563 17.2812 14.2969 16.9531 14.25C16.625 14.25 16.3438 14.1094 16.1562 13.9219L12.8281 10.3125L8.75 14.7188ZM24.875 23.25C25.4844 23.25 26 23.7656 26 24.375C26 25.0313 25.4844 25.5 24.875 25.5L3.5 25.5C2.65625 25.5 2 24.8438 2 24L2 5.625C2 5.01562 2.46875 4.5 3.125 4.5C3.73437 4.5 4.25 5.01562 4.25 5.625L4.25 23.25L24.875 23.25Z</StreamGeometry>
+    </UserControl.Resources>
+
+    <Viewbox>
+        <Grid Width="1280" Height="800" Background="#FF07161A">
+            <buttons:ButtonListExpander
+                HorizontalAlignment="Left"
+                ExpandDirection="ToLeft"
+                OpenLength="300"
+                Height="800"
+                Background="Transparent"
+                VerticalAlignment="Top"
+                ItemsSource="{Binding NomeBotoesSeletor}">
+                
+                <buttons:ButtonListExpander.ItemTemplate>
+                    <DataTemplate>
+                        <buttons:CustomButton
+                            Width="220"
+                            UncheckedBackground="Transparent"
+                            CheckedBackground="Transparent"
+                            ToggleButtonCornerRadius="0"
+                            ButtonContent="LeftIconAndText"
+                            ToggleHorizontalAlignment="Stretch"
+                            HorizontalAlignment="Left"
+                            TextHorizontalAlignment="Left"
+                            IconHorizontalAlignment="Left"
+                            ButtonText="{Binding NomeBotao}"
+                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            IconForegroundChecked="Aqua"
+                            IconForegroundUnchecked="Aqua"
+                            SvgStringLeft="{Binding SvgString}"/>
+                    </DataTemplate>
+                </buttons:ButtonListExpander.ItemTemplate>
+
+                <Grid VerticalAlignment="Bottom">
+                    
+                    <ItemsControl x:Name="ItemsControlT" ItemsSource="{Binding NomeBotoesSeletor}">
+                        <DataTemplate>
+                            <buttons:CustomButton
+                                Width="220"
+                                UncheckedBackground="Transparent"
+                                CheckedBackground="Transparent"
+                                ToggleButtonCornerRadius="0"
+                                ButtonContent="LeftIconAndText"
+                                ToggleHorizontalAlignment="Stretch"
+                                HorizontalAlignment="Left"
+                                TextHorizontalAlignment="Left"
+                                IconHorizontalAlignment="Left"
+                                ButtonText="{Binding NomeBotao, Source={RelativeSource Mode=DataContext}}"
+                                IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                                IconForegroundChecked="Aqua"
+                                IconForegroundUnchecked="Aqua"
+                                SvgStringLeft="{Binding SvgString}"/>
+                        </DataTemplate>
+                    </ItemsControl>
+                    
+                    <buttons:CustomButton
+                        Width="220"
+                        UncheckedBackground="Transparent"
+                        CheckedBackground="Transparent"
+                        ToggleButtonCornerRadius="0"
+                        ButtonContent="LeftIconAndText"
+                        ToggleHorizontalAlignment="Stretch"
+                        HorizontalAlignment="Left"
+                        TextHorizontalAlignment="Left"
+                        IconHorizontalAlignment="Left"
+                        ButtonText="Voltar"
+                        IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                        IconForegroundChecked="Aqua"
+                        IconForegroundUnchecked="Aqua"
+                        LeftIcon="{StaticResource IconVoltar}"/>
+                </Grid>
+                
+            </buttons:ButtonListExpander>
+            <ContentControl Name="ContentControlConfiguracao"/>
+        </Grid>
+    </Viewbox>
+    
+</UserControl>

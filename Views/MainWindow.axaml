@@ -46,37 +46,10 @@
                         <TextBlock Text="Test Button 2"/>
                     </Button>
                     
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
+                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenConfiguracaoWindow}">
+                        <TextBlock Text="Tela Configuração"/>
                     </Button>
                     
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
-                    
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
-                    
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
-                    
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
-                    
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
-                    
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
-                    
-                    <Button Margin="0, 20, 20, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding OpenTestWindow}">
-                        <TextBlock Text="Test Button 1"/>
-                    </Button>
                 </WrapPanel>
             </StackPanel>
             

@@ -4,7 +4,9 @@ using Avalonia.ReactiveUI;
 using MusicStoreApp.ViewModels;
 using MusicStoreApp.ViewModels.Controlador;
 using MusicStoreApp.ViewModels.Embarcado;
+using MusicStoreApp.ViewModels.Veiculo;
 using MusicStoreApp.Views.Controlador;
+using MusicStoreApp.Views.Veiculo;
 using ReactiveUI;
 
 namespace MusicStoreApp.Views;
@@ -19,6 +21,7 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
             action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync));
             action(ViewModel!.ShowTest.RegisterHandler(DoShowTestAsync));
             action(ViewModel!.ShowTest2.RegisterHandler(DoShowTest2Async));
+            action(ViewModel!.ShowTelaConfiguracao.RegisterHandler(DoShowTelaConfiguracao));
         });
     }
 
@@ -44,6 +47,15 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     private async Task DoShowTest2Async(InteractionContext<ControladorTestViewModel, int> interaction)
     {
         var dialog = new ControladorTesteView();
+        dialog.DataContext = interaction.Input;
+
+        var result = await dialog.ShowDialog<int>(this);
+        interaction.SetOutput(result);
+    }    
+    
+    private async Task DoShowTelaConfiguracao(InteractionContext<ModeloApresentacaoConfiguracaoVeiculoGuia, int> interaction)
+    {
+        var dialog = new TelaConfiguracaoPrincipal();
         dialog.DataContext = interaction.Input;
 
         var result = await dialog.ShowDialog<int>(this);

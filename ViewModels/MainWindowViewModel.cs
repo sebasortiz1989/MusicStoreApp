@@ -8,6 +8,7 @@ using System.Windows.Input;
 using MusicStoreApp.Models;
 using MusicStoreApp.ViewModels.Controlador;
 using MusicStoreApp.ViewModels.Embarcado;
+using MusicStoreApp.ViewModels.Veiculo;
 using MusicStoreApp.Views.Controlador;
 using ReactiveUI;
 
@@ -21,11 +22,14 @@ public class MainWindowViewModel : ViewModelBase
 
     public ICommand OpenTestWindow2 { get; }
 
+    public ICommand OpenConfiguracaoWindow { get; }
+
     public MainWindowViewModel()
     {
         ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
         ShowTest = new Interaction<ModeloApresentacaoConfiguracaoSensorProfundidade, int>();
         ShowTest2 = new Interaction<ControladorTestViewModel, int>();
+        ShowTelaConfiguracao = new Interaction<ModeloApresentacaoConfiguracaoVeiculoGuia, int>();
 
         BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
         {
@@ -50,6 +54,12 @@ public class MainWindowViewModel : ViewModelBase
             var result = await ShowTest2.Handle(test);
         });
 
+        OpenConfiguracaoWindow = ReactiveCommand.CreateFromTask(async () =>
+        {
+            var test = new ModeloApresentacaoConfiguracaoVeiculoGuia();
+            var result = await ShowTelaConfiguracao.Handle(test);
+        });
+
         RxApp.MainThreadScheduler.Schedule(LoadAlbums);
     }
 
@@ -58,6 +68,8 @@ public class MainWindowViewModel : ViewModelBase
     public Interaction<ModeloApresentacaoConfiguracaoSensorProfundidade, int> ShowTest { get; }
 
     public Interaction<ControladorTestViewModel, int> ShowTest2 { get; }
+
+    public Interaction<ModeloApresentacaoConfiguracaoVeiculoGuia, int> ShowTelaConfiguracao { get; }
 
     public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 

@@ -77,6 +77,7 @@
                         <buttons:CustomButton
                             x:Name="BottaoVeiculo"
                             Width="284"
+                            Tapped="BottaoVeiculo_OnTapped"
                             UncheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
                             ButtonContent="LeftIconAndText"
@@ -96,6 +97,7 @@
                         <buttons:CustomButton
                             x:Name="BotaoGps"
                             Width="284"
+                            Tapped="BotaoGps_OnTapped"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
@@ -116,6 +118,7 @@
                         <buttons:CustomButton
                             x:Name="BotaoTrabalho"
                             Width="284"
+                            Tapped="BotaoTrabalho_OnTapped"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
@@ -136,6 +139,7 @@
                         <buttons:CustomButton
                             x:Name="BotaoDados"
                             Width="284"
+                            Tapped="BotaoDados_OnTapped"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
@@ -156,6 +160,7 @@
                         <buttons:CustomButton
                             x:Name="BotaoMeuAplicativo"
                             Width="284"
+                            Tapped="BotaoMeuAplicativo_OnTapped"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"

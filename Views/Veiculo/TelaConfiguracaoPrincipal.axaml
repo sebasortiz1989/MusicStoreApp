@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:buttons="clr-namespace:Verion.Apresentacao.Avalonia.Buttons;assembly=Verion.Apresentacao.Avalonia"
              xmlns:veiculo="clr-namespace:MusicStoreApp.ViewModels.Veiculo"
+             xmlns:layout="clr-namespace:Verion.Apresentacao.Avalonia.Layout;assembly=Verion.Apresentacao.Avalonia"
              mc:Ignorable="d"
              d:DesignWidth="1280"
              d:DesignHeight="800"
@@ -22,113 +23,167 @@
 
     <Viewbox>
         <Grid Width="1280" Height="800" Background="#FF07161A">
+            <!-- Barra Direita -->
             <buttons:ButtonListExpander
                 HorizontalAlignment="Left"
                 ExpandDirection="ToLeft"
-                OpenLength="300"
+                OpenLength="364"
                 Height="800"
-                Background="Transparent"
+                Background="#141414CC"
                 VerticalAlignment="Top">
-
+                
                 <Grid>
                     <StackPanel>
+                      <layout:AutoPanel
+                            Width="284"
+                            IsVisible="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
+                            HorizontalGap="10"
+                            HorizontalItemAlignment="Center"
+                            HorizontalPadding="19.2"
+                            Orientation="Horizontal"
+                            VerticalItemAlignment="Center"
+                            VerticalPadding="12.8"
+                            VerticalSizing="Hug"
+                            Wrap="NoWrap">
+                            <layout:AutoPanel
+                                Width="32"
+                                Height="32"
+                                HorizontalItemAlignment="Center"
+                                HorizontalPadding="8"
+                                Orientation="Vertical"
+                                VerticalGap="10"
+                                VerticalItemAlignment="Center"
+                                VerticalPadding="8"
+                                Wrap="NoWrap">
+                                <Border>
+                                    <Path
+                                        Width="29.65484046936035"
+                                        Height="23.65484046936035"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        Data="{StaticResource IconGears}"
+                                        Fill="#ff5de4ff"
+                                        Stretch="UniformToFill"
+                                        UseLayoutRounding="True" />
+                                </Border>
+                            </layout:AutoPanel>
+                            <TextBlock
+                                FontFamily="Roboto"
+                                FontSize="22.4"
+                                Foreground="#ff5de4ff"
+                                Text="Configurações" />
+                        </layout:AutoPanel>
+                        
                         <buttons:CustomButton
-                            Width="220"
+                            x:Name="BottaoVeiculo"
+                            Width="284"
                             UncheckedBackground="Transparent"
-                            CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
                             ButtonContent="LeftIconAndText"
-                            ToggleHorizontalAlignment="Stretch"
-                            HorizontalAlignment="Left"
-                            TextHorizontalAlignment="Left"
-                            IconHorizontalAlignment="Left"
-                            ButtonText="Configurações"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
-                            LeftIcon="{StaticResource IconGears}"/>
-                        <buttons:CustomButton
-                            Width="220"
-                            UncheckedBackground="Transparent"
-                            CheckedBackground="Transparent"
-                            ToggleButtonCornerRadius="0"
-                            ButtonContent="LeftIconAndText"
+                            Padding="12"
+                            FontSize="22.4"
+                            FontFamily="Roboto"
+                            ToggleBorderThickness="0"
                             ToggleHorizontalAlignment="Stretch"
                             HorizontalAlignment="Left"
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Veículo"
                             IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
+                            IconForegroundChecked="#ff5de4ff"
+                            IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconVeiculo}"/>
                         <buttons:CustomButton
-                            Width="220"
+                            x:Name="BotaoGps"
+                            Width="284"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
                             ButtonContent="LeftIconAndText"
+                            ToggleBorderThickness="0"
                             ToggleHorizontalAlignment="Stretch"
                             HorizontalAlignment="Left"
+                            Padding="12"
+                            FontSize="22.4"
+                            FontFamily="Roboto"
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="GPS"
                             IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
+                            IconForegroundChecked="#ff5de4ff"
+                            IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconGps}"/>
                         <buttons:CustomButton
-                            Width="220"
+                            x:Name="BotaoTrabalho"
+                            Width="284"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
                             ButtonContent="LeftIconAndText"
+                            ToggleBorderThickness="0"
                             ToggleHorizontalAlignment="Stretch"
                             HorizontalAlignment="Left"
+                            Padding="12"
+                            FontSize="22.4"
+                            FontFamily="Roboto"
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Trabalho"
                             IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
+                            IconForegroundChecked="#ff5de4ff"
+                            IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconTrabalho}"/>
                         <buttons:CustomButton
-                            Width="220"
+                            x:Name="BotaoDados"
+                            Width="284"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
                             ButtonContent="LeftIconAndText"
+                            ToggleBorderThickness="0"
                             ToggleHorizontalAlignment="Stretch"
                             HorizontalAlignment="Left"
+                            Padding="12"
+                            FontSize="22.4"
+                            FontFamily="Roboto"
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Dados"
                             IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
+                            IconForegroundChecked="#ff5de4ff"
+                            IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconDados}"/>
                         <buttons:CustomButton
-                            Width="220"
+                            x:Name="BotaoMeuAplicativo"
+                            Width="284"
                             UncheckedBackground="Transparent"
                             CheckedBackground="Transparent"
                             ToggleButtonCornerRadius="0"
                             ButtonContent="LeftIconAndText"
+                            ToggleBorderThickness="0"
                             ToggleHorizontalAlignment="Stretch"
                             HorizontalAlignment="Left"
+                            Padding="12"
+                            FontSize="22.4"
+                            FontFamily="Roboto"
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Meu Aplicativo"
                             IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                            IconForegroundChecked="Aqua"
-                            IconForegroundUnchecked="Aqua"
+                            IconForegroundChecked="#ff5de4ff"
+                            IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconUser}"/>
                     </StackPanel>
                     
                     <buttons:CustomButton
                         VerticalAlignment="Bottom"
-                        Width="220"
+                        Width="284"
+                        Padding="12"
+                        FontSize="22.4"
+                        FontFamily="Roboto"
                         UncheckedBackground="Transparent"
                         CheckedBackground="Transparent"
+                        ToggleBorderThickness="0"
                         ToggleButtonCornerRadius="0"
                         ButtonContent="LeftIconAndTextButton"
                         ToggleHorizontalAlignment="Stretch"
@@ -137,11 +192,10 @@
                         IconHorizontalAlignment="Left"
                         ButtonText="Voltar"
                         IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
-                        IconForegroundChecked="Aqua"
-                        IconForegroundUnchecked="Aqua"
+                        IconForegroundChecked="#ff5de4ff"
+                        IconForegroundUnchecked="#ff5de4ff"
                         LeftIcon="{StaticResource IconVoltar}"/>
                 </Grid>
-                
             </buttons:ButtonListExpander>
             <ContentControl Name="ContentControlConfiguracao"/>
         </Grid>

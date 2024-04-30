@@ -90,7 +90,6 @@
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Veículo"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
                             IconForegroundChecked="#ff5de4ff"
                             IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconVeiculo}"/>
@@ -111,7 +110,6 @@
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="GPS"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
                             IconForegroundChecked="#ff5de4ff"
                             IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconGps}"/>
@@ -132,7 +130,6 @@
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Trabalho"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
                             IconForegroundChecked="#ff5de4ff"
                             IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconTrabalho}"/>
@@ -153,7 +150,6 @@
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Dados"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
                             IconForegroundChecked="#ff5de4ff"
                             IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconDados}"/>
@@ -174,7 +170,6 @@
                             TextHorizontalAlignment="Left"
                             IconHorizontalAlignment="Left"
                             ButtonText="Meu Aplicativo"
-                            IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
                             IconForegroundChecked="#ff5de4ff"
                             IconForegroundUnchecked="#ff5de4ff"
                             LeftIcon="{StaticResource IconUser}"/>
@@ -196,7 +191,6 @@
                         TextHorizontalAlignment="Left"
                         IconHorizontalAlignment="Left"
                         ButtonText="Voltar"
-                        IsExpanded="{Binding IsExpanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type buttons:ButtonListExpander}}, Mode=OneWay}"
                         IconForegroundChecked="#ff5de4ff"
                         IconForegroundUnchecked="#ff5de4ff"
                         LeftIcon="{StaticResource IconVoltar}"/>

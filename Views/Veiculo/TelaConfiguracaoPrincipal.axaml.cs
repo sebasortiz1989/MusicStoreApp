@@ -14,11 +14,6 @@ public partial class TelaConfiguracaoPrincipal : ReactiveWindow<ModeloApresentac
     {
         InitializeComponent();
         buttonList = new Collection<CustomButton> { BottaoVeiculo, BotaoGps, BotaoTrabalho, BotaoDados, BotaoMeuAplicativo };
-        BottaoVeiculo.IsCheckedChanged += OnIsCheckedChangedVeiculoEvent;
-        BotaoGps.IsCheckedChanged += OnIsCheckedChangedVeiculoEvent;
-        BotaoTrabalho.IsCheckedChanged += OnIsCheckedChangedVeiculoEvent;
-        BotaoDados.IsCheckedChanged += OnIsCheckedChangedVeiculoEvent;
-        BotaoMeuAplicativo.IsCheckedChanged += OnIsCheckedChangedVeiculoEvent;
     }
 
     private void OnIsCheckedChangedVeiculoEvent(CustomButton customButton, bool arg2)

@@ -22,6 +22,7 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
             action(ViewModel!.ShowTest.RegisterHandler(DoShowTestAsync));
             action(ViewModel!.ShowTest2.RegisterHandler(DoShowTest2Async));
             action(ViewModel!.ShowTelaConfiguracao.RegisterHandler(DoShowTelaConfiguracao));
+            action(ViewModel!.ShowTelaVelocimetro.RegisterHandler(DoShowTelaVelocimetro));
         });
     }
 
@@ -56,6 +57,15 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     private async Task DoShowTelaConfiguracao(InteractionContext<ModeloApresentacaoConfiguracaoVeiculoGuia, int> interaction)
     {
         var dialog = new TelaConfiguracaoPrincipal();
+        dialog.DataContext = interaction.Input;
+
+        var result = await dialog.ShowDialog<int>(this);
+        interaction.SetOutput(result);
+    }
+
+    private async Task DoShowTelaVelocimetro(InteractionContext<ModeloApresentacaoVelocimetro, int> interaction)
+    {
+        var dialog = new TelaVelocimetro();
         dialog.DataContext = interaction.Input;
 
         var result = await dialog.ShowDialog<int>(this);

@@ -2,7 +2,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="200"
              x:Class="MusicStoreApp.Views.Veiculo.TelaVelocimetro">
-    Welcome to Avalonia! Velocimetro
+    <Viewbox>
+        <Grid Background="Red" Width="300" Height="200">
+            <Grid Background="Black" Width="212" Height="110">
+                <Canvas VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid>
+                        <Arc Margin="-95, -40, 0, 0" HorizontalAlignment="Left" Width="190" Height="190" StrokeThickness="3" Stroke="#FFA8FDFF" StartAngle="0" SweepAngle="-180"/>
+                        <Arc Margin="-95, -40, 0, 0" HorizontalAlignment="Left" Width="190" Height="190" StrokeThickness="3" Stroke="#FF3B5959" StartAngle="-28" SweepAngle="-4"/>
+                        <Arc Margin="-95, -40, 0, 0" HorizontalAlignment="Left" Width="190" Height="190" StrokeThickness="3" Stroke="#FF3B5959" StartAngle="-58" SweepAngle="-4"/>
+                        <Arc Margin="-95, -40, 0, 0" HorizontalAlignment="Left" Width="190" Height="190" StrokeThickness="3" Stroke="#FF3B5959" StartAngle="-88" SweepAngle="-4"/>
+                        <Arc Margin="-95, -40, 0, 0" HorizontalAlignment="Left" Width="190" Height="190" StrokeThickness="3" Stroke="#FF3B5959" StartAngle="-118" SweepAngle="-4"/>
+                        <Arc Margin="-95, -40, 0, 0" HorizontalAlignment="Left" Width="190" Height="190" StrokeThickness="3" Stroke="#FF3B5959" StartAngle="-148" SweepAngle="-4"/>
+                    </Grid>
+
+                    <Arc Margin="-87.5, -32.50, 0, 0" HorizontalAlignment="Left" Width="175" Height="175" StrokeThickness="85" StartAngle="0" SweepAngle="-180">
+                        <Arc.Stroke>
+                            <RadialGradientBrush GradientOrigin="50%,75%"
+                                                 Center="50%, 50%"
+                                                 Radius="1" >
+                                <RadialGradientBrush.GradientStops>
+                                    <GradientStop Color="#002A7A9C" Offset="0" />
+                                    <GradientStop Color="#002A7A9C" Offset="0" />
+                                    <GradientStop Color="#FF2A7A9C" Offset="0.5" />
+                                    <GradientStop Color="#FF2A7A9C" Offset="0.5" />
+                                    <GradientStop Color="#002A7A9C" Offset="1" />
+                                    <GradientStop Color="Black" Offset="1" />
+                                </RadialGradientBrush.GradientStops>
+                            </RadialGradientBrush>
+                        </Arc.Stroke>
+                    </Arc>
+                    <!-- #7F2A7B9E -->
+                </Canvas>
+            </Grid>
+        </Grid>
+    </Viewbox>
 </UserControl>
